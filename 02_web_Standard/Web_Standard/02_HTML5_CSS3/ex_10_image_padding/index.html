@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지여백</title>
+    <style>
+        .container{width: 510px; border: 1px solid #f00;}
+        .container img{display: block;}
+        .container1{width: 510px; border: 1px solid #000;}
+        .container1 img{vertical-align: bottom;}
+        /* 이미지는 블록요소로 사용하지 못할 때 쓸 수 있음 여백 값을 해결?*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn.pixabay.com/photo/2022/06/02/06/43/flowers-7237133__340.jpg" alt="꽃">
+    </div>
+    <div class="container1">
+        <img src="https://cdn.pixabay.com/photo/2022/06/02/11/13/cathedral-7237718__340.jpg" alt="">
+    </div>
+
+    <ul>
+        <li>image 요소는 인라인 요소이며 image는 텍스트 취급된다. <br> 브라우저는 요소 내의 텍스트를 렌더링할 때 나름의 방식이 있는데 이를 이해하려면 타이포그래피에 대해 어느 정도 이해해야 한다.</li>
+        <li>image 요소를 블록요소로 전환하면 더이상 텍스트로 취급되지 않음</li>
+        <li>inline 요소에 사용할 수 있는 vertical-align 프로퍼티를 사용하는 방법으로 기본값은 baseline인데 변경하여 위치 조정</li>
+    </ul>
+</body>
+</html>

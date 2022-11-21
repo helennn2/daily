@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0;}
+body{}
+#wrap{width: 800px; height: 680px; margin: 10px auto; }
+.header{width: 800px; height: 150px; background: rgb(208, 65, 65);position: relative;}
+.header_l{margin-left: 45px;}
+.header_l ul{list-style: none; padding-top: 75px;}
+.header_l ul li{float: left; margin-right: 30px;}
+.header_l ul li a{color: #fff; text-decoration: none; font-weight: bold; font-size: 1.07em;}
+.header_r img{position: absolute; top: 0px; right: 0;}
+
+.section{width: 800px; height: 450px;}
+.section .article{width: 600px; height: 100%; float: left;}
+.section .article h2{margin: 20px 0;}
+.section .article h3{padding: 5px 0 8px 20px;}
+.section .article p{font-size: .9em;}
+.section .article .box{width:600px ; height: 360px; float: left; }
+.section .article .box1{width: 280px; height: 180px; float: left; border: 3px solid #ddd; margin-right: 6px; margin-bottom: 6px; overflow: scroll; position: relative;}
+.section .article #house{margin-top: 5px; position: absolute; top:5px; left: 3px;}
+.section .article .box2{width: 280px; height: 180px;float: left; border: 3px solid #ddd; overflow: scroll; position: relative;}
+.section .article #food{margin-top: 5px; position: absolute; top:5px; left: 3px;}
+.section .article .box3{width: 280px; height: 180px;  float: left; clear: both;border: 3px solid #ddd; margin-right: 6px; margin-bottom: 6px; overflow: scroll; position: relative;}
+.section .article #bottle{margin-top: 5px; position: absolute; top:5px; left: 3px;}
+.section .article .box4{width: 280px; height: 180px; float: left; border: 3px solid #ddd; overflow: scroll; position: relative;}
+.section .article #name{margin-top: 5px; position: absolute; top:5px; left: 3px;}
+.section .aside{width: 200px; height: 100%;}
+.section .aside img{text-align: center;}
+
+.footer{width: 800px; height: 80px; background-color: rgb(160, 155, 155); clear: both;}
+.footer p{text-align: center; line-height: 80px; font-size: .9em;}

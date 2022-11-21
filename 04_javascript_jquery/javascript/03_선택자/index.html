@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 선택자</title>
+</head>
+<body>
+    <h1 id="title">javescript Basic Selector</h1>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list2" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list3" class="list">
+            <li class="red">li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li id="list3_4">li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="box">
+            box level1
+            <div>
+                box level2
+                <div>
+                    box level3
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quaerat nam tempore. Esse praesentium et necessitatibus commodi. Vitae rerum ipsam incidunt, maiores ad impedit animi a quasi provident porro officiis.</p>
+
+
+    <script> //자주 쓰는 방법
+        //html문서는 document태그 선택
+        var firstTitle=document.getElementById('title'); //id는 한번만 쓸 수 있음
+        var myList=document.getElementsByClassName('list'); 
+        var paragraphs=document.getElementsByTagName('p');
+        var myList2=document.querySelector('.list .red');
+        myList2.style.display='none';
+
+        document.getElementById('title').style.color='red';
+        firstTitle.style.color='blue'; //변수에 담은거 가져와서 스타일 적용. 변수 많을수록 이렇게 적용해야.
+
+        myList[0].style.background='yellow'; //list의 0번째(첫번째)한테 스타일 적용
+        myList[1].style.color='green';
+
+        /* paragraphs[0].style.color="purple";
+        paragraphs[1].style.color="skyblue";
+        paragraphs[2].style.color="yellowgreen"; */
+
+        for(var i=0; i<=paragraphs.length; i++){
+            paragraphs[i].style.color="yellowgreen";
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

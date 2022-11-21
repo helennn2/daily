@@ -1,0 +1,42 @@
+$('.ball1').delay(1000).animate({
+    top:170,
+    left:20
+},800);
+$('.ball2').delay(1000).animate({
+    top:170,
+    left:240
+},800);
+$('.ball3').delay(1000).animate({
+    top:130,
+    left:40
+},800);
+$('.ball4').delay(1000).animate({
+    top:30,
+    left:290
+},800);
+$('.ball5').delay(1000).animate({
+    top:180,
+    left:50
+},800);
+$('.ball6').delay(1000).animate({
+    top:120,
+    left:180
+},800);
+$('.ball7').delay(1000).animate({
+    top:10,
+    left:220
+},800);
+$('.ball8').delay(1000).animate({
+    top:20,
+    left:20
+},800);
+$('.ball9').delay(1000).animate({
+    top:10,
+    left:220
+},800);
+
+$('.bar').animate({
+    top:200
+},1000).animate({
+    top:530
+},1000)

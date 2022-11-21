@@ -1,0 +1,46 @@
+<!-- https://jqueryui.com/checkboxradio/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#"> <!-- action은 서버로 넘어가는 것 -->
+            <h1>jquery UI form</h1>
+            <div class="ui-widget">
+                <label for="location">Select</label>
+                <select name="location" id="location">
+                    <optgroup label="texas">
+                        <option value="Fort worth">Fort worth</option>
+                        <option value="Fort worth1">Fort worth1</option>
+                        <option value="Fort worth2">Fort worth2</option>
+                    </optgroup>
+                    <optgroup label="aa">
+                        <option value="bbb">bbb</option>
+                        <option value="ccc">ccc</option>
+                        <option value="ddd">ddd</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="ui-widget">
+                <label for="category">category</label>
+                <input type="text" id="category" class="ui-selectmenu-button ui-button">
+            </div>
+            <div class="ui-widget">
+                <label for="experience">experience</label>
+                <input type="text" id="experience" class="ui-widget-content ui-spinner-input">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

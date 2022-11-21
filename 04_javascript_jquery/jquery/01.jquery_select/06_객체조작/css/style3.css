@@ -1,0 +1,20 @@
+#wrap{width: 1000px; padding: 30px; margin: 50px auto;}
+.sec{border: 3px solid salmon; padding: 20px; margin-bottom: 10px;}
+#sec1 div{margin-bottom: 5px; padding: 5px;}
+.box{background: #ddd; padding: 20px;}
+p{border: 1px solid rgb(74, 89, 224); margin-bottom: 5px; padding: 5px;}
+.box1 div{margin-bottom: 5px;}
+#basket{background: rgb(222, 160, 225); padding: 10px; }
+#apple{background: rgb(202, 60, 60);}
+#banana{background: rgb(241, 234, 105);}
+#orange{background: rgb(224, 142, 48);}
+
+.box2{border: 5px solid rgb(84, 86, 219); padding: 30px; margin-bottom: 5px;}
+.box3{border: 5px solid rgb(84, 86, 219); padding: 30px; margin-bottom: 5px;}
+.box4{border: 5px solid rgb(84, 86, 219); padding: 30px;}
+.box5, .box6{border: 5px solid rgb(84, 86, 219); padding: 30px; margin-bottom: 5px;}
+
+ul{list-style: none;}
+ul li{border: 2px solid #ddd; margin-bottom: 2px;}
+#sec5 h1{text-align: center; margin-bottom: 10px; color: tomato;}
+#sec5 div{border: 1px solid rgb(223, 167, 63); padding: 5px; margin-bottom: 5px;}

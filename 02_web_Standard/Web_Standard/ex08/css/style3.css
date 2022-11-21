@@ -1,0 +1,14 @@
+body{line-height: 1.8;}
+.container{
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 3rem auto;
+    columns:15rem; /* 240PX 이 아래로는 떨어지게끔 */
+    column-gap: 2rem;
+}
+.container li{
+    margin-bottom: 5rem;
+    break-inside: avoid;
+}
+img{width: 100%;}

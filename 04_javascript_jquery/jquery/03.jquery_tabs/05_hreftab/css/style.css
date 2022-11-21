@@ -1,0 +1,12 @@
+*{margin: 0; padding: 0;}
+#wrap{width: 487px; margin: 100px auto;}
+#wrap #tab{display: flex; list-style: none;}
+#wrap #tab li{height: 25px; overflow: hidden; margin-right: 6px;}
+#wrap #tab li:last-child{margin-right: 0;}
+#wrap #tab li a{display: block;}
+#wrap #tab li a.on img{margin-top: -25px;}
+#wrap #tab li a img{margin-top: 0;}
+#wrap #content{width: 487px; height: 323px; position: relative;}
+#wrap #content div{position: absolute; width: 455px; height: 291px; background: #55aaea; padding: 16px; display: none; left: 0; top: 0;}
+#wrap #content div:first-child{display: block;}
+#wrap #content div img.on{cursor: pointer; opacity: .5;}

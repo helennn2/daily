@@ -1,0 +1,66 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+body{background: #eee;}
+#wrap{width: 100%; max-width: 1000px; margin: 50px auto; background: #fff; padding: 20px;}
+h1,h2{font-size: 18px;}
+h4{color: rgb(231, 99, 43);}
+p{margin-top: 20px; line-height: 1.8;}
+.box{padding: 10px;}
+
+.container .item1{background: rgb(214, 54, 54);}
+.container .item2{background: rgb(67, 214, 54);}
+.container .item3{background: rgb(54, 99, 214);}
+.container .item4{background: rgb(214, 155, 54);}
+.container .item5{background: rgb(214, 54, 134);}
+.container .item6{background: rgb(54, 206, 214);}
+.container .item{width: 50px; height: 50px; text-align: center; line-height: 50px; color: #fff;}
+
+.container1{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex;}
+
+.container2{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-direction: row-reverse;}
+
+.container3{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-direction: column;}
+
+.container4{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-direction: column-reverse;}
+
+.container5{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-wrap: nowrap;}
+.container5 .item{width: 200px;}
+
+.container6{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-wrap: wrap;}
+.container6 .item{width: 200px;}
+
+.container7{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-wrap: wrap-reverse;}
+.container7 .item{width: 200px;}
+
+.container8{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; flex-flow:column nowrap;}
+.container8 .item{height: 200px;}
+
+.container9{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; justify-content: flex-start;}
+
+.container10{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; justify-content: flex-end;}
+
+.container11{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; justify-content: center;}
+
+.container12{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; justify-content: space-around;}
+
+.container13{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; justify-content: space-between;}
+
+.container14{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; justify-content: space-evenly;}
+
+.container15{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; align-items: center;}
+
+.container16{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex; align-items:baseline;}
+.container16 .item{text-align: left; line-height: 1;}
+.container16 .item2{padding: 20px;}
+
+.container17{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex;}
+.container17 .item1{order: 1;}
+.container17 .item2{order: 3;}
+.container17 .item3{order: 2;}
+
+.container18{width: 100%; height: 300px; background: rgb(226, 186, 186); display: flex;}
+/* .container18 .item1{flex-grow: 3; flex-shrink: 2; flex-basis: 60%;} shrink는 grow에 영향 받는 듯
+.container18 .item2{flex-grow: 1; flex-shrink: 1; flex-basis: 10%;}
+.container18 .item3{flex-grow: 1; flex-shrink: 1; flex-basis: 30%;} */
+/* .container18 .item{flex: 0 0 30%;} */
+.container18 .item{flex: 0 1 100%;}

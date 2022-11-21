@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg{width: 1000px; position: absolute; left: 50%; background: yellow; transform: translateX(-50%);}
+        svg text{font-size: 50px; fill: rgba(0,0,0,.1); stroke-width: 2px; stroke: thistle; animation: ani 2s linear infinite; stroke-dasharray: 20;}
+
+        @keyframes ani {
+            0%{stroke-dashoffset: 0; fill: rgba(0,0,0,.1);}
+            100%{stroke-dashoffset: 100; fill: rgba(238, 7, 7, 1);}
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <text x="100" y="100">I Love HyeRi</text>
+    </svg>
+</body>
+</html>

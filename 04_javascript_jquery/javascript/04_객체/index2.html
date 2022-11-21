@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체(Array object)</title>
+    <script>
+        var arr=[30,"따르릉",true];
+        document.write(`<h3>배열값 가져오기1</h3>`);
+        document.write(arr[0], '<br>')
+        document.write(arr[1], '<br>')
+        document.write(arr[2], '<br>')
+
+        document.write(`<h3>배열값 가져오기2</h3>`);
+        for(var i=0; i<arr.length; i++){
+            document.write(arr[i],'<br>')
+        }
+
+        document.write(`<h3>배열값 가져오기3</h3>`);
+        for(i in arr){
+            document.write(arr[i],'<br>')
+        }
+
+        document.write(`=============================`);
+        var arr1=["사당","교대","방배","강남"];
+        var arr2=["신사","압구정","옥수"];
+
+        var result=arr1.join("-");
+        console.log(result)
+
+        var result=arr1.concat(arr2);
+        console.log(result)
+
+        var result=arr1.slice(2,3);
+        console.log(result)
+
+        var result=arr1.sort();
+        console.log(result)
+
+        var result=arr2.reverse();
+        console.log(result)
+
+        document.write(`=============================<br>`);
+        var greenArr=["교대","방배","강남"];
+        var yellowArr=["미금","정자","수서"];
+
+        greenArr.splice(2,1,"서초","역삼");
+        console.log(greenArr);
+
+        var data1=yellowArr.pop();
+        console.log(yellowArr); // yellowArr얘한테는 미금, 정자만 있는거
+        var data2=yellowArr.shift(); //가장 앞쪽에 밀어넣음. 시프트는 맨 앞쪽에 있는애를 저장. 미금. 
+
+        console.log(data2);
+        console.log(yellowArr); //정자
+
+        yellowArr.push(data2);
+        console.log(yellowArr); //정자, 미금만 나옴
+
+        console.log(data1); // 수서        
+        yellowArr.unshift(data1); //언시프트는 앞에 밀어넣음
+        console.log(yellowArr); //수서, 정자, 미금. 수서를 앞으로 넣으라고 했으니까.
+
+        document.write(`=============================<br>`);
+        document.write(`<h2>문자열 객체</h2>`);
+        var t="hello javascript lo";
+        var s=" ge "
+        var r=t.charAt(4);
+        // console.log(r); 이 방법으로 써도 됨. 콘솔에 o 뜸
+        document.write(r,"<br><hr>");
+        r=t.indexOf('ja');
+        document.write(r,"<br><hr>");
+        r=t.indexOf('hee'); //없을 경우 -1
+        document.write(r,"<br><hr>");
+        r=t.lastIndexOf('i');
+        document.write(r,"<br><hr>");
+        r=t.match('javascript');
+        document.write(r,"<br><hr>");
+        r=t.match('jt'); //없을 경우 null
+        document.write(r,"<br><hr>");
+        r=t.replace('javascript','jqery'); //앞에는 바꾸고자 하는 문자, 뒤에는 바뀔 문자
+        document.write(r,"<br><hr>");
+        r=t.search('lo');
+        document.write(r,"<br><hr>");
+        r=t.slice(9,11); 
+        document.write(r,"<br><hr>");
+        r=t.slice(9,-1); //뒤에서 값을 반환해 가져옴 
+        document.write(r,"<br><hr>");
+        r=t.substring(9,11); //슬라이스랑 비슷 
+        document.write(r,"<br><hr>");
+        r=t.substring(9,-9); //-가 들어가면 0번째 가져옴
+        document.write(r,"<br><hr>");
+        r=t.substr(9,3); 
+        document.write(r,"<br><hr>");
+        r=t.split(" "); 
+        document.write(r,"<br><hr>");
+        r=t.toUpperCase(); 
+        document.write(r,"<br><hr>");
+        r=t.length; 
+        document.write(r,"<br><hr>");
+        r=t.concat(" love"); //새로운 문자 추가
+        document.write(r,"<br><hr>");
+        /* document.write(s,"<br><hr>");
+        r=s.trim(); 
+        document.write(s,"<br><hr>"); */
+
+        document.write(`=============================<br>`);
+        document.write(`<h2>문자열 객체 연습</h2>`);
+        var typo="Hello Thank you good luck to you"
+        var re=typo.charAt(16)
+        document.write(re,"<br><hr>");
+        document.write(typo.charAt(16),"<br><hr>");
+        document.write(typo.indexOf("you"),"<br><hr>");
+        document.write(typo.indexOf("you",16),"<br><hr>");
+        document.write(typo.lastIndexOf("you"),"<br><hr>");
+        document.write(typo.lastIndexOf("you",25),"<br><hr>");
+        document.write(typo.match("luck"),"<br><hr>");
+        document.write(typo.search("you"),"<br><hr>");
+        document.write(typo.substr(21,4),"<br><hr>");
+        document.write(typo.substring(6,12),"<br><hr>");
+        document.write(typo.replace("you","me"),"<br><hr>");
+        document.write(typo.toLowerCase(),"<br><hr>");
+        document.write(typo.toUpperCase(),"<br><hr>");
+        document.write(typo.length,"<br><hr>");
+        document.write(typo.slice(""),"<br><hr>");
+
+        document.write(`=============================<br>`);
+        document.write(`<h2>연습 문제</h2>`);
+        var userName=prompt("당신의 영문 이름은?","");
+        
+        var upperName=userName.toUpperCase();
+        document.write(upperName, "<br>");
+
+        var userNum=prompt("당신의 연락처는?","");
+        var result=userNum.substring(0,userNum.length -4)+"****";
+        document.write(result,"<br>");
+
+        document.write(`=============================<br>`);
+        document.write(`<h2>연습 문제2</h2>`);
+        var userEmail=prompt("당신의 이메일 주소는?","");
+        var arrUrl=[".co.kr",".com",".net",".ok.kr",".go.kr"];
+        var check1=false;
+        var check2=false;
+
+        // @ 없으면 -1값. 있다면 true.
+        if(userEmail.indexOf("@")>0){check1=true};
+        for(var i=0; i<arrUrl.length; i++){
+            if(userEmail.indexOf(arrUrl[i]) > 0){ //값들이 있다면 true
+                check2=true;
+            }
+        }
+        if(check1 && check2){
+            document.write(userEmail)
+        }else{
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

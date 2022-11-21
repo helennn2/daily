@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기예보</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script>
+        $(function(){
+            $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835553&appid=e43dea31aa2f5590ff0c507f6fc51f83&units=metric',function(data){
+                //alert(data.weather[0].icon)
+                let minTemp=data.main.temp_min;
+                let maxTemp=data.main.temp_max;
+                let temp=data.main.temp;
+                let icon=data.weather[0].icon;
+                let dt=data.dt;
+                let d=new Date();
+                dd =`${moment(d).format(`dddd, YYYY Do MM`)}`;
+
+
+                $('.ctemp').append(temp);
+                $('.cmintemp').append(minTemp);
+                $('.cmaxtemp').append(maxTemp);
+                $('.cicon').append('<img src="http://openweathermap.org/img/wn/'+icon+'@2x.png" />');
+                $('h2').append(dd);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>weather api</h1>
+    <h2></h2>
+    <div class="ctemp">현재 온도 : </div>
+    <div class="cmintemp">최저 온도 : </div>
+    <div class="cmaxtemp">최고 온도 : </div>
+    <div class="cicon">아이콘 : </div>
+</body>
+</html>

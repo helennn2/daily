@@ -1,0 +1,10 @@
+html,body{margin: 0; padding: 0; background: #f0f0f0;}
+.container{width: 90%; margin: 0 auto;}
+.panel-question{
+    margin-bottom: 20px;
+    background: #fff;
+}
+.panel-question.active .panal-heading{color: red;}
+.panal-heading{font-weight: bold; background: #333; color: #fff; cursor: pointer; padding: 5px;}
+.panel-body{padding: 15px;}
+#btnCollapse{float: right; padding: 5px; color: #fff; background: #999; margin-bottom: 10px; border: none; cursor: pointer;}

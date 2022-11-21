@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg Color</title>
+    <script>
+        var color=["yellow","green","tomato","yellowgreen","pink"];
+        var i=0;
+        function colorBg(){
+            if(i>=color.length){i=0} // 5가 되면 i=0이 되게
+
+            var bg=document.getElementsByTagName("body")[0];
+            bg.style.backgroundColor=color[i];
+            i++
+        }
+    </script>
+</head>
+<body>
+    <button onclick="colorBg()">배경색 바꾸기</button>
+</body>
+</html>

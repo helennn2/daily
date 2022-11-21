@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+html{font-size: 62.5%;} //약 12px정도 될 듯
+article, aside, figcaption, figure, footer, header, section, nav, hgroup{display: block;}
+body{padding: 3rem; font-family: "Nanum Gothic", sans-serif;}
+ol, ul{list-style: none;}
+
+@mixin clearfix(){
+    &::after{content: ""; display: block; clear: both;}
+}
+
+@mixin mq($screen-width){
+    @if $screen-width == 'small-screen-1'{
+        @media screen and (min-width : 900px) and (max-width: 1200px){
+            @content;
+        }
+    } @else if $screen-width == 'small-screen-2'{
+        @media screen and (min-width : 701px) and (max-width: 899px){
+            @content;
+        }
+    } @else if $screen-width == 'small-screen-3'{
+        @media screen and (max-width: 700px){
+            @content;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>로긴 폼 문서 만들기</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			body, h1, p, input, label { 
+				margin:0px;
+				padding:0px;
+				font-family:"맑은 고딕",돋움;
+				font-size:13px;
+				}
+			body { 
+				border-top:15px solid #333;
+				}
+			h1 {
+				font-size:50px;
+				letter-spacing:-5px;
+				color:#C8C8C8;
+				text-align:center;
+				margin-bottom: 20px;
+				}
+			/* Login Form Design */
+			#loginForm{border-top: 50px solid #ff6633; padding-top: 30px;}
+			#loginForm fieldset{width: 330px; padding: 50px; border: 5px solid #efefef; margin: 10px auto; border-radius: 15px;}
+			#loginForm fieldset legend{display: none;}
+			#loginForm fieldset #login{float: left;}
+			#loginForm fieldset #login p{}
+			#loginForm fieldset #login label{width: 60px; display: block; float: left; font-weight: bold;}
+			#loginForm fieldset #login input{margin-bottom: 5px; width: 154px; padding: 2px; border: 1px solid #999;}
+			#loginForm fieldset #btnLogin{float: left; margin-left: 10px; background: #ff6633; border-style: none; color: #fff; height: 50px; width: 90px; border-radius: 5px;}
+			#loginForm fieldset #btn1{clear: both; margin-left:60px; padding: 10px 0;}
+			#loginForm fieldset #btn1 input{}
+			#loginForm fieldset #btn1 label{}
+			#loginForm fieldset #btn2{margin-left:60px;}
+			#loginForm fieldset #btn2 input{padding: 5px 10px; border: none; border-radius: 5px; color: #fff; background: #666;}
+
+/* 			fieldset{width: 450px;  margin: 10px auto; border: 5px solid #ddd; border-radius: 20px; padding: 80px 40px;}
+			#loginForm{}
+			legend{display: none;}
+			#login{float: left; margin-left: 70px;}
+			#login p #userId{margin-left: 13px;}
+			#btnLogin{background-color: red; border: 1px solid red; width: 88px; height: 48px; border-radius: 5px; color: #fff; margin-left: 10px;}
+			#login p .labelStyle{font-weight: bold; }
+			#login p #userId{margin-bottom: 5px;}
+			#login p #userPWD{}
+			#btn1{margin-left: 128px; margin-top: 10px;}
+			#btn2{margin-left: 128px;  margin-top: 10px}
+			#btn2 #btnJoin{background-color: #000; color: #fff; height: 27px; padding: 0 5px; border-radius: 5px;}
+			#btn2 #btnSearch{background-color: #000; color: #fff; height: 27px; padding: 0 5px; border-radius: 5px;}
+ */
+		</style>
+	</head>
+
+	<body>
+		<form id="loginForm">
+			<h1>Member Login</h1>
+			<fieldset>	
+				<legend>Member Loin</legend>
+				<div id="login">
+					<p>
+						<label for="userId" class="labelStyle">아이디</label>
+						<input type="text" id="userId" />
+					</p>
+					<p>
+						<label for="userPWD" class="labelStyle">비밀번호</label>
+						<input type="password" id="userPWD" />
+					</p>
+				</div>
+					<input type="submit" value="로그인하기" id="btnLogin" />
+				<p id="btn1">
+					<input type="checkbox" id="saveId" value="savedIdYes" />
+					<label for="saveId">아이디저장</label>	
+					<input type="checkbox" id="secure" value="secureYes" />
+					<label for="secure">보안접속</label>	
+				</p>
+				<p id="btn2">
+					<input type="button" value="회원가입" id="btnJoin" />
+					<input type="button" value="아이디/비밀번호 찾기" id="btnSearch" />
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

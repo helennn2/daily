@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델(B0M-Browser Object Model)</title>
+    <style>
+        body{height: 3000px;}
+    </style>
+    <script>
+        /* window.open('http://www.easyspub.com/','','width=350, height=400, left=50, top=50, scrollbars=no')
+
+        alert("윈도우창이 열렸습니다.") */
+
+        /* var intv=setInterval(function(){},3000);
+        clearInterval(intv) */
+
+        /* var addNum=0;
+        var subNum=1000;
+
+        var auto1=setInterval(function(){
+            addNum++;
+            console.log("addNum:" + addNum);
+        },3000); */ //3초마다 한번씩. 계속 가기 때문에 정지도 만들어줘야
+
+        /* var auto2=setInterval(function(){
+            subNum--;
+            console.log("subNum"+subNum);
+        },3000);
+
+        var addNum1=0;
+        var auto3=setTimeout(function(){addNum1++; console.log(addNum1)},5000); */ //1 한번 나타나고 안나타남
+
+        var scW=screen.availHeight;
+        console.log(scW);
+
+        var scW1=screen.height;
+        console.log(scW1);
+
+        var a=location.href;
+        console.log(a);
+        // location.href="http://www.naver.com"
+
+        var info=navigator.userAgent.toLowerCase();
+        // console.log(info)
+        var os=null;
+
+        if(info.indexOf('windows')>=0){
+            os='윈도우';
+        }else if(info.indexOf('macintosh')>=0){
+            os='맥';
+        }else if(info.indexOf('iphone')>=0){
+            os='아이폰';
+        }else if(info.indexOf('android')>=0){
+            os='안드로이드';
+            
+        }
+
+        document.write(os);
+    </script>
+</head>
+<body>
+    <button onclick="clearInterval(auto1)">증가정지</button> <!--  addNum 정지 -->
+    <button onclick="clearInterval(auto2)">감소정지</button> <!--  sumNum 정지 -->
+</body>
+</html>

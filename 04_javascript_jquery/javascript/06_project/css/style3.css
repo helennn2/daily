@@ -1,0 +1,9 @@
+*{margin: 0; padding: 0;}
+.tab-wrap{width: 800px; margin: 50px auto;}
+.tab-wrap .tab-menu{overflow: hidden;}
+.tab-wrap .tab-menu li{list-style: none; float: left; background: #ebebeb; margin-right: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.tab-wrap .tab-menu li a{display: block; text-transform: uppercase; font-weight: bold; line-height: 27px; text-decoration: none; color: #999999;  padding: 5px 20px;}
+.tab-wrap .tab-menu li a.on{background-color: thistle; color: #fff; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.tab-wrap #tabContent{background: #eee; padding: 20px; box-sizing: border-box;}
+.tab-wrap #tabContent>div{display: none;}
+.tab-wrap #tabContent>div:first-child{display: block;}

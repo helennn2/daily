@@ -1,0 +1,5 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+.header{background: #222; padding: 40px 0 0 42px; border-bottom: 8px solid pink;}
+.header .menu{height: 38px; display: flex;}
+.header .menu li{padding: 0 0 0 8px;}

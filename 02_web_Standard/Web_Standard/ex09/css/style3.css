@@ -1,0 +1,39 @@
+*{margin: 0; padding: 0;}
+body{font: 0.9em "맑은 고딕";}
+#tableDesign{margin: 50px auto; border-collapse: collapse;}
+#tableDesign caption{background: url(../images/title_bbs.png) no-repeat; width: 397px; height: 55px;}
+#tableDesign caption span{display: none;}
+#tableDesign tr:first-child{box-shadow: 0 2px 5px #ccc; height: 34px; background: linear-gradient(to bottom, rgb(239, 235, 235), rgb(229, 221, 221));}
+#tableDesign tr:first-child th:first-child{border-top-left-radius: 5px; border-bottom-left-radius: 5px;}
+#tableDesign tr:first-child th:last-child{border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+#tableDesign tr th:first-child{width: 50px;}
+#tableDesign tr th:nth-child(2){width: 70px;}
+#tableDesign tr th:nth-child(3){width: 420px;}
+#tableDesign tr th:nth-child(4){width: 100px;}
+#tableDesign tr th:nth-child(5){width: 100px;}
+#tableDesign tr th span{}
+#tableDesign tr td{text-align: center; border-bottom: 1px solid #dbdbdb; padding: 4px 8px; position: relative;}
+#tableDesign tr td:after{content: ""; width: 1px; height: 8px; background: #dbdbdb; position: absolute; bottom: 0; right: 0;}
+/* td에 기준점 줘서 위치 잡음 */
+#tableDesign tr .leftStyle{text-align: left;}
+/* #tableDesign tr td:last-child{background: none;} */
+#tableDesign tr .lastStyle:after{background: none;}
+#tableDesign tr .lastStyle .btnView{background: #fff; border: 2px solid #666633; padding: 3px 10px; border-radius: 5px; cursor: pointer;}
+#tableDesign tr .lastStyle .btnView:hover{background: #333; color: #fff;}
+#tableDesign tr:hover{background: #eaeaea;}
+
+/* 
+body{font-size: .9em; margin: 0 auto; width: 600px;}
+#tableDesign{border-collapse: collapse; width: 720px;}
+#tableDesign caption{display: table-caption;}
+#tableDesign caption{ background-image: url(../images/title_bbs.png) no-repeat; display: block;}
+#tableDesign tr{border-bottom: 1px solid #ddd;}
+#tableDesign tr th{display: table-cell; border-collapse: collapse; background: #ddd; padding: 5px 15px; border: 1px solid #ddd; border-radius:10px;}
+#tableDesign tr th:first-child{width: 50px;}
+#tableDesign tr th:nth-child(2){width: 50px;}
+#tableDesign tr th:nth-child(3){width: 450px;}
+#tableDesign tr th:nth-child(4){width: 80px;}
+#tableDesign tr th:nth-child(5){width: 50px;}
+#tableDesign tr td{padding: 5px 0; text-align: center;}
+#tableDesign tr .leftStyle{text-align: left;}
+#tableDesign tr .btnView{border: 2px solid #000; border-radius: 5px; background: #fff; padding: 2px 5px;} */

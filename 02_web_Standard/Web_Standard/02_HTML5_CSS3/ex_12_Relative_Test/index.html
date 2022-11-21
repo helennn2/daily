@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{width: 700px; height: 400px; background-color: red; position: relative; margin: 0 auto;}
+        .box1_1{width: 100px; height: 100px; position: absolute; top: 0; left: 0;}
+        .box1_2{width: 100px; height: 100px; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%);}
+        .box1_2 .box1_2_1{width: 10px; height: 10px; margin-left: 45px;}
+
+        .color1{background-color: greenyellow;}
+        .color2{background-color: blue;}
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box1_1 color1"></div>
+        <div class="box1_2 color2">
+            <div class="box1_2_1 color1"></div>
+        </div>
+    </div>
+</body>
+</html>

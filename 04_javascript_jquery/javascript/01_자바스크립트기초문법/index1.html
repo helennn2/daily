@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X4-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>산술 연산자</h2>");
+        var num1=15;
+        var num2=2;
+        var result;
+        result=num1+num2;
+        document.write(result, "<hr/>");
+        result=num1-num2;
+        document.write(result, "<hr/>");
+        result=num1*num2;
+        document.write(result, "<hr/>");
+        result=num1/num2;
+        document.write(result, "<hr/>");
+        result=num1%num2;
+        document.write(result, "<hr/>");
+
+        document.write("<h2>문자 결합 연산자</h2>");
+        var t1="학교종이";
+        var t2="땡땡땡";
+        var t3=8282;
+        var t4="어서 모이자";
+        var result;
+
+        result=t1+t2+t3+t4;
+        document.write(result, "<br/>");
+        document.write(typeof result);
+        document.write("<hr/>");
+
+        document.write("<h2>대입 연산자</h2>");        
+        var num3=10;
+        var num4=3;
+        
+        num3+=num4;
+        document.write(num3, "<br/>");
+
+        num3-=num4; //위에 변한값 13-3
+        document.write(num3, "<br/>");
+
+        num3*=num4; 
+        document.write(num3, "<br/>");
+
+        num3/=num4;
+        document.write(num3, "<br/>");
+
+        num3%=num4;
+        document.write(num3, "<br/>");
+
+        let x=75;
+        let y=87;
+        
+        x+=y;
+
+        document.write(`합계 : ${x}`);
+        document.write(`<br/>`);
+        document.write(`평균:`);
+        document.write(x/2);
+
+
+        var str="<table border='1'>";
+        str+="<tr>";
+        str+="<td>1</td><td>2</td><td>3</td>";
+        str+="</tr>";
+        str+="</table>";
+        document.write(str);
+        document.write("<hr/>");
+
+        document.write("<h2>증감 연산자 increment and decrement operators</h2>");  
+        var x1=1;
+
+        document.write(x1++);
+        document.write(x1++);
+        document.write(x1++);
+        document.write(x1++);
+        document.write("<br/>");
+
+        var x2=1;
+        document.write(++x2);
+        document.write(++x2);
+        document.write(++x2);
+        document.write(++x2);
+        document.write(++x2);
+        document.write("<br/>");
+
+        var num5=10;
+        var num6=20;
+        var result3;
+
+        num5--;
+        document.write(num5); //9. 여기서 불러내서.
+
+        num5++;
+        document.write(num5); //10
+        document.write("<hr>");
+
+        document.write("<h2>비교 연산자 comparison operators</h2>");
+        var k=10, m="10", result4;
+        result4= k===m; //==일때는 true, ===일때는 false
+        document.write(result4, "<br/>");
+
+        var a=10, b=20, c=10, f="20", result5;
+
+        result5= a>b;
+        document.write(result5, "<br/>");
+
+        result5= a<b;
+        document.write(result5, "<br/>");
+
+        result5= a>=b;
+        document.write(result5, "<br/>");
+
+        result5= b==f;
+        document.write(result5, "<br/>");
+
+        result5= b===f;
+        document.write(result5, "<br/>");
+
+        result5= a !=b;
+        document.write(result5, "<br/> <hr>");
+
+        document.write("<h2>논리 연산자 logical operators</h2>");
+        var x3=(7>6)&&(1>8); //and. 하나라도 거짓이면 거짓
+        var y3=(7>6)||(1>8); //or. 하나라도 참이면 참 
+        var z=!(7>6); //반대
+
+        document.write("7이 6보다 크고, 1이 8보다 크면 논리값은?");
+        document.write(x3, "<br>"); //false
+        document.write(y3, "<br>"); //true
+        document.write(z, "<br>"); //false
+
+        const value1=false;
+        const value2=4<2;
+        function check(){
+            for(let i=0; i<10; i++){
+                console.log('LOVE')
+            }
+            return false;
+        }
+        console.log(`or: ${value1 || value2 || check()}`);
+        
+        document.write("<hr>");
+        document.write("<h2>연산자 우선순위</h2>");
+        var x4=10;
+        var y4=20;
+
+        document.write(x4+y4/2) //20
+        document.write("<br>")
+        document.write((x4+y4)/2) //15 
+        document.write("<br>")
+        document.write((x4+y4)/2*3) //45 앞순
+
+        document.write("<hr>");
+        document.write("<h2>삼항 조건 연산자 conditional operators</h2>");        
+        var a1=10;
+        var b1=3;
+
+        var result=a1>b1?"javascript":"hello" //물음표 기준으로 앞(treu). 아니면 뒤(false).
+        document.write(result)
+
+        document.write("<h2>20대 대상의 소개팅을 준비 중입니다. 그런데 남성은 다 모집되었지만 여성은 아직 모집이 다 되지 않았네요. prompt 메서드를 활용하여 성별과 나이를 물어 봅니다. 20대 여성이라면 결과값이 true로, 아니라면 결과값으로 false가 나오게 만드세요.</h2>"); 
+
+        /* var gender=prompt("성별이 어떻게 됩니까?","여성")
+        var age=prompt("나이가 어떻게 됩니까?") */
+        /* var result6=age>=20&&age<30&&gender=="여성"; */
+
+        // document.write(result6);
+
+        document.write("<h2>메서드를 활용하여 국어, 영어, 수학 점수를 입력 받으세요. 평균이 70점 이상이고 각 과목별 점수가 60점 이상이면 true를 아니라면 false를 출력합니다.</h2>"); 
+        /* var korNum=Number(prompt("국어의 점수는?","0"));
+        var engNum=Number(prompt("영어의 점수는?","0"));
+        var mathNum=Number(prompt("수학의 점수는?","0"));
+        var avg=(korNum+engNum+mathNum)/3;
+
+        result=avg>=70&&korNum>=60&&engNum>=60&&mathNum>=60;
+        document.write(result);
+ */
+        // document.write(typeof korNum);
+
+        document.write("<h2>지현 샘의 지출 내역은 교통비 3,000원, 식비 7,000원, 음료비 2,000원입니다. 삼향 조건 연산자를 사용하여 하루 적정 지출 비용인 1만원을 초가했을 경우 '000원 초과'라고 출력되고, 아니면 '돈 관리 참 잘했어요!'라고 출력되도록 해보세요.</h2>"); 
+        var a2=3000;
+        var b2=7000;
+        var c=2000;
+        var total=a2+b2+c;
+
+        /* var result=total>10000 ? total-10000+"원 초과":"돈 관리 참 잘했어요!" 이 방법도 가능*/
+
+        var result=total>10000 ? `${total-10000} 원 초과` : `돈 관리 참 잘했어요`;
+
+        document.write(result);
+
+        document.write("<h2>질의응답창(prompt)을 이용하여 신장과 몸무게를 입력받아 옵니다. 방문자의 몸무게가 적정 몸무게보다 이상일 경우 '적정 몸무게 이상', 미만일 경우에는 '적정 몸무게 미달'로 출력되도록 하세요. 적정 몸무게 공식은 '적정 몸무게=(신장-100)*0.9</h2>"); 
+       /*  var height=Number(prompt("키는?",""));
+        var weight=Number(prompt("몸무게는?","")); */
+        var avg=(height-100)*0.9;
+
+        var result=avg<weight? "적정 몸무게 이상":"적정 몸무게 미달";
+
+        document.write(result);
+        
+
+    </script>
+</body>
+</html>

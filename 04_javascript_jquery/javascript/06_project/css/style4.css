@@ -1,0 +1,14 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; color: rgb(53, 42, 42);}
+li{list-style: none;}
+header{position: fixed; padding: 0 2em; top: 0; border-bottom: 2px solid #ccc; width: 100%; height: 6em; transition: .3s ease-in-out; background: #fff;}
+nav h1{position: absolute; top: 50%; transform: translateY(-50%); left: 20px;}
+nav ul{float: right; line-height: 6em;}
+nav ul li{float: left; margin-left: 20px;}
+.container{margin: 10em auto 0; width: 75%; text-align: center;}
+.container main p{height: 50em;}
+.container main p:first-child{background: yellowgreen;}
+.container main p:nth-child(2){background: rgb(41, 117, 193);}
+.container main p:nth-child(3){background: rgb(193, 127, 41);}
+header .active{height: 4em; background: rgba(255,255,255,.6);}
+header .active ul{line-height: 4em;}

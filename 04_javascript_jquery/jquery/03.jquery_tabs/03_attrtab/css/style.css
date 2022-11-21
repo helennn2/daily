@@ -1,0 +1,7 @@
+*{margin: 0; padding: 0;}
+body{padding: 10px; margin-top: 100px; }
+#wrap{width: 522px; margin: 0 auto; text-align: center;}
+li{list-style: none;}
+#nav ul{display: flex;}
+#nav ul li{margin-left: 10px;}
+#nav ul li.on{margin-left: 0;}

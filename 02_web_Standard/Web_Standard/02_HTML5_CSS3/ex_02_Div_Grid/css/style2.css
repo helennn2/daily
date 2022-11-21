@@ -1,0 +1,17 @@
+*{margin: 0; padding: 0;}
+body{background: url(../images2/grid_back_02.gif);}
+#wrap{width: 770px; height: 560px; margin-left: 560px; margin-top: 140px;}
+.fl{float: left;}
+
+.color1{background: url(../images2/grid_color1.gif);}
+.color2{background: url(../images2/grid_color2.gif);}
+.color3{background: url(../images2/grid_color3.gif);}
+
+.box11_3{width: 770px; height: 210px;}
+.box11_1{width: 770px; height: 70px;}
+.box2_3{width: 140px; height: 210px; background: #fff;}
+.box1_3{width: 70px; height: 210px;}
+.box3_3{width: 210px; height: 210px; }
+.box1_1{width: 70px; height: 70px;}
+
+ul{list-style: none;}

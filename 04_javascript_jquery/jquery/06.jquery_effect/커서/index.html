@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커서 이미지 변경하기</title>
+    <style>
+        body{background: #ddd;}
+        #box{width: 500px; height: 300px; margin: 200px auto; background: #fff; text-align: center;}
+    </style>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#box a').css({cursor:'url(icon.png),auto'});
+        });
+    </script>
+</head>
+<body>
+    <div id="box"><a href="#">점심시간 : 13:20~</a></div>
+</body>
+</html>

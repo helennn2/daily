@@ -1,0 +1,42 @@
+/* float에 아무런 대응도 하지 않은 상태 */
+.float1{background-color: burlywood; padding: 30px; text-align: center;}
+.float1 h1{color: #fff; font-size: 20px; text-align: center;}
+.float1 #header1{border: 10px solid #ccc; padding: 10px;}
+.float1 #container1{background: #fff;  padding: 10px; margin: 10px 0; float: none;}
+.float1 #container1 .lnb1{border: 10px solid rgb(164, 30, 30); padding: 10px; margin-bottom: 10px; width: 300px; float: left;}
+.float1 #container1 .content1{border: 10px solid rgb(164, 30, 30); padding: 10px; width: 800px; float: left;}
+.float1 #footer1{border: 10px solid #ccc; padding: 10px;}
+p{color: #fff;}
+
+/* float에 float으로 대응하는 방법 */
+.float2{background-color: burlywood; padding: 30px; text-align: center;}
+.float2 h1{color: #fff; font-size: 20px; text-align: center;}
+.float2 #header2{border: 10px solid #ccc; padding: 10px;}
+.float2 #container2{background: #fff;  padding: 10px; margin: 10px 0; float: left;}
+.float2 #container2 .lnb2{border: 10px solid rgb(164, 30, 30); padding: 10px; margin-bottom: 10px; width: 300px; float: left;}
+.float2 #container2 .content2{border: 10px solid rgb(164, 30, 30); padding: 10px; width: 500px; float: left;}
+.float2 #footer2{border: 10px solid #ccc; padding: 10px; clear: both;}
+p{color: #fff;}
+
+/* 대응 안하면 높이 줄고 대응하면 컨텐츠만큼 줄음 */
+
+/* float에 overflow로 대응하는 방법 */
+.float3{background-color: burlywood; padding: 30px; text-align: center;}
+.float3 h1{color: #fff; font-size: 20px; text-align: center;}
+.float3 #header3{border: 10px solid #ccc; padding: 10px;}
+.float3 #container3{background: #fff;  padding: 10px; margin: 10px 0; float: none; overflow: hidden;}
+.float3 #container3 .lnb3{border: 10px solid rgb(164, 30, 30); padding: 10px; margin-bottom: 10px; width: 600px; float: left; }
+.float3 #container3 .content3{border: 10px solid rgb(164, 30, 30); padding: 10px; width: 700px; float: right;}
+.float3 #footer3{border: 10px solid #ccc; padding: 10px; clear: both;}
+p{color: #fff;}
+
+/* float에 가상 선택자 :after로 clear 대응하는 방법 */
+.float4{background-color: burlywood; padding: 30px; text-align: center;}
+.float4 h1{color: #fff; font-size: 20px; text-align: center;}
+.float4 #header4{border: 10px solid #ccc; padding: 10px;}
+.float4 #container4{background: #fff;  padding: 10px; margin: 10px 0; float: none;}
+.float4 #container4:after{content: "이곳은 가상으로 만든 공간입니다."; display: block; clear: both;}
+.float4 #container4 .lnb4{border: 10px solid rgb(164, 30, 30); padding: 10px; margin-bottom: 10px; width: 600px; float: left; }
+.float4 #container4 .content4{border: 10px solid rgb(164, 30, 30); padding: 10px; width: 700px; float: right;}
+.float4 #footer3{border: 10px solid #ccc; padding: 10px; clear: both;}
+p{color: #fff;}

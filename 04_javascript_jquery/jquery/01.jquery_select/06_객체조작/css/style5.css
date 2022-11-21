@@ -1,0 +1,13 @@
+#wrap{margin:20px auto; width: 400px; height: 600px; background-color: yellowgreen; position: relative;}
+.box-wrap{}
+.box-wrap .ball1{width: 20px; height: 20px; border-radius: 50%; background-color: aqua; position: absolute; top: 50px; left: 130px;}
+.box-wrap .ball2{width: 20px; height: 20px; border-radius: 50%; background-color: cadetblue; position: absolute; top: 50px; left: 150px;}
+.box-wrap .ball3{width: 20px; height: 20px; border-radius: 50%; background-color: violet; position: absolute; top: 50px; left: 170px;}
+.box-wrap .ball4{width: 20px; height: 20px; border-radius: 50%; background-color: red; position: absolute; top: 50px; left: 190px;}
+.box-wrap .ball5{width: 20px; height: 20px; border-radius: 50%; background-color: fuchsia; position: absolute; top: 50px; left: 210px;}
+.box-wrap .ball6{width: 20px; height: 20px; border-radius: 50%; background-color: gold; position: absolute; top: 70px; left: 150px;}
+.box-wrap .ball7{width: 20px; height: 20px; border-radius: 50%; background-color: grey; position: absolute; top: 70px; left: 170px;}
+.box-wrap .ball8{width: 20px; height: 20px; border-radius: 50%; background-color: slateblue; position: absolute; top: 70px; left: 190px;}
+.box-wrap .ball9{width: 20px; height: 20px; border-radius: 50%; background-color: royalblue; position: absolute; top: 90px; left: 170px;}
+
+.bar{width: 30px; height: 120px; background-color: brown; position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%);}

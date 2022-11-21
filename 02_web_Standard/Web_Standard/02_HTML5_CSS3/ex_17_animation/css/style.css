@@ -1,0 +1,20 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit;} /* 부모한테 상속받음 (색) */
+.menu{text-align: center;}
+.menu li{margin-top: 25px;}
+.menu li a{font-size: 60px; font-weight: bold; line-height: 1.4; color: silver; position: relative; display: inline-block; }
+.menu li a:before{position: absolute; content: attr(data-text); left: 0; top: 0; color: #ff0; width: 0; overflow: hidden; white-space: nowrap; transition: .2s ease-in;}
+/* content: attr(data-text); data-text를 한번에 가져옴 */
+.menu li a:hover:before{width: 100%;}
+li[data-animation="to-left"] a{color: #00b386;}
+li[data-animation="to-left"] a:before{color: silver; width: 100%;}
+li[data-animation="to-left"] a:hover:before{width: 0;}
+
+li[data-animation="to-bottom"] a:before{color: brown; height: 0; width: 100%;}
+li[data-animation="to-bottom"] a:hover:before{height: 100%;}
+
+li[data-animation="to-top"] a{color: thistle;}
+li[data-animation="to-top"] a:before{color: silver; height: 100%; width: 100%;}
+li[data-animation="to-top"] a:hover:before{height: 0;}
+

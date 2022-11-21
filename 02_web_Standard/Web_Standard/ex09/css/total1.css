@@ -1,0 +1,14 @@
+body{margin-top: 80px;}
+#wrapper{width: 744px; margin: 0 auto;}
+#mainNav{}
+#mainNav li{width: 150px; height: 150px; border: 5px solid #dbdbdb; border-radius: 20px; background:#fff; background-repeat: no-repeat; background-position: 50% 50%; padding: 10px; margin: 0 8px 8px 0;}
+#mainNav li:nth-child(4n){margin-right: 0;}
+#mainNav li:nth-child(2){background-image: url(../images/sandal.png);}
+#mainNav li:nth-child(3){background-image: url(../images/neck.png);}
+#mainNav li:nth-child(4){background-image: url(../images/bag.png);}
+#mainNav li:nth-child(5){background-image: url(../images/top.png);}
+#mainNav li:nth-child(6){background-image: url(../images/dress.png);}
+#mainNav li:nth-child(7){background-image: url(../images/bottom.png);}
+#mainNav li:nth-child(1){background:#64991e;}
+#mainNav li:nth-child(8){background:#d81b21;}
+#mainNav li a{line-height: 150px; font-size: 2em;}

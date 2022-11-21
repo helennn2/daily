@@ -1,0 +1,11 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+#wrap{width: 97px; margin: 100px auto;}
+#wrap .nav li{text-align: center; cursor: pointer; width: 97px;}
+#wrap .nav li .menu-img{height: 0; overflow: hidden;}
+#wrap .nav li .menu-img a img{height: 97px;} /* 부모가 높이0이라 안먹히지만 높이 필요함 */
+#wrap .nav li .menu-txt{margin-bottom: 10px;}
+#wrap .nav li .menu-txt .on{display: none;}
+
+
+

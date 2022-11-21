@@ -1,0 +1,20 @@
+body{line-height: 1.5;}
+.container{
+    width: 75%;
+    margin: 0 auto;
+    columns:3;
+/*     columns: 20rem 3; */
+/*     column-width: 20rem; */
+    /* height: 60vh; */ /* %의 역할로 3개 지정한 거 무시하고 들어감 */
+}
+
+figure{
+   column-span: all; /* 이미지가 전체 화면 다 차지 */
+   /* break-inside: avoid; */
+}
+
+h3{
+    break-before: column;
+}
+
+img{width: 100%;}

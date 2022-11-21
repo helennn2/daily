@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+body{background: #192839;}
+.imgWrap{width: 620px; margin: 50px auto;}
+.imgWrap .thumbs{width: 100px; float: left;}
+.imgWrap .thumbs em{display: none;}
+.imgWrap .thumbs a img{border: 1px solid #ccc; padding: 5px; margin-bottom: 3.5px;}
+.imgWrap #largeImg{width: 500px; height: 280px; padding: 5px; border: 1px solid #ccc; margin-left: 5px; overflow: hidden; float: left;}
+#caption{background: rgba(0,0,0,.3); clear: both; padding: 10px; border: 1px solid #ccc; position: relative; color: #fff;}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernize rotate</title>
+    <style>
+        .demo-img{-webkit-box-reflect: below;}
+
+        .no-cssreflections .alt-img { display: block; transform: rotateX(180deg); position: relative; top: -5px;}
+        .cssreflections .alt-img{display: none;}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2022/08/04/16/01/sea-7364988__340.jpg" alt="바다" class="demo-img">
+    <img src="https://cdn.pixabay.com/photo/2022/08/04/16/01/sea-7364988__340.jpg" alt="반전바다" class="alt-img">
+    <script>
+        if (Modernizr.cssreflections) {
+        // supported
+        } else {
+        // not-supported
+        }
+    </script>
+</body>
+</html>

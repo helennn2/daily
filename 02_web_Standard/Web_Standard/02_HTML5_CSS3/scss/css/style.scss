@@ -1,0 +1,168 @@
+@charset "utf-8";
+body{padding-bottom: 100px; width: 1000px; margin: 0 auto; background: #eee;}
+.wrap{width: 1000px; margin: 0 auto; background: #fff; padding:  20px 50px;}
+
+/* 1. 변수 영문, 영문+숫자, 영문-, _소문자 */
+$gray: #666;
+$white: #fff;
+$blue:rgb(46, 46, 199);
+$red:rgb(237, 31, 31);
+$fs24:24px;
+
+.btn1{
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: $fs24;
+    color: $gray;
+    background: $white;
+    border: 1px solid gray;
+    text-align: center;
+    &:hover{background: $gray; color: $white;}
+}
+.btn2{
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid $red;
+    background: $blue;
+    &:hover{background: $red;}
+}
+
+/* 2. 자식 선택자 종속 선택자 */
+.sass{color: $red;
+    ul{border: 1px solid $red;
+        li{background: pink; margin-bottom: 5px;
+            a{text-decoration: none;
+            &:hover{color: $red}
+            &.bbb{font-size: 12px;}
+            }
+            .bbb{text-decoration: underline;}
+            &:last-child{border: 1px dotted $blue;}
+        }
+    }
+}
+
+/* 3. mixin, include */
+@mixin test{
+    width: 100px;
+    height: 100px;
+    border: 1px solid $red;
+    box-shadow: 2px 2px 2px #222;
+}
+.test , .last, .first{@include test()}
+
+@mixin clear{
+    &:after{content:""; display: block; clear: both;}
+}
+
+.clearfix{@include clear(); border: 3px solid $blue;
+    p{float: left; @include test(); margin-right: 10px;}
+}
+
+/* 4. 매개변수 */
+@mixin border($color) {
+    border: 1px solid $color;
+}
+.var{@include border(blue)}
+.red{@include border(rgb(238, 33, 33))}
+.green{@include border(green)}
+
+@mixin box($w, $h){
+    width: $w;
+    height: $h;
+}
+.var2{
+    @include box(300px, 100px);
+    background: yellow;
+}
+.var3{
+    @include box(500px, 100px);
+    background: yellowgreen;
+}
+
+/* 5. 문자보관 */
+$bx : string1;
+
+div.#{$bx}{border:1px solid yellowgreen}
+@mixin bx1 ($position, $wid, $color1) {
+    border-#{$position} : $wid solid $color1;
+}
+.string2{
+    @include bx1 (bottom, 10px, red)
+}
+.string3{
+    @include bx1 (left, 10px, rgb(143, 208, 149));
+    @include bx1 (right, 10px, rgb(143, 208, 149));
+}
+
+/* 6. for 반복문 */
+.list li{background: no-repeat 0 0/20px 30px; text-indent: 30px; line-height: 50px;}
+/* .list li.ico1{background-image: url(../img/ico1.png);}
+.list li.ico2{background-image: url(../img/ico2.png);}
+.list li.ico3{background-image: url(../img/ico3.png);}
+.list li.ico4{background-image: url(../img/ico4.png);}
+.list li.ico5{background-image: url(../img/ico5.png);} */
+@for $i from 1 to 6{
+    .list li.ico#{$i}{background-image: url(../img/ico#{$i}.png)}
+    .list li:nth-child(#{$i})::before{
+        content:"하이염 #{$i}"
+    }
+}
+
+/* 7. each문 */
+@each $var in book, zoom, new{
+    .ico_#{$var}{
+        background: url(../img/#{$var}.png) no-repeat;
+        text-indent: 80px;
+    }
+}
+
+$heading:(
+    h1:10px,
+    h2:11px,
+    h3:12px
+);
+
+@each $ele, $fs in $heading{
+    #{$ele}{
+        font-size: $fs;
+    }
+}
+
+/* 8. 조건문 */
+@mixin btn_radius($h, $radius:true){
+    padding: 0 20px; 
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background: #000;
+    color: #fff;
+
+    @if $radius{
+        border-radius: $h/2;
+    }@else{
+        border: 1px solid red;
+    }
+}
+.btn{
+    @include btn_radius(30px, true) //false면 빨간색만 나옴
+}
+@mixin position($x, $y, $z){
+    position: absolute;
+    left: $x;
+    top: $y;
+    z-index: $z;
+
+    @if $x==50% and $y==50% {
+        transform: translate(-50%,-50%);
+    }@else if $x==50%{
+        transform: translateX(-50%)
+    }@else if $y==50%{
+        transform: translateY(-50%)
+    }
+}
+.if{
+    width: 300px; height: 300px; background: yellowgreen;
+    @include position(50%, null, 2)
+}

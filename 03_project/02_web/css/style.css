@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* 공통속성 */
+body{font-family: 'Nanum Gothic', sans-serif; /* font-family: 'Nanum Brush Script', cursive; */ }
+.container{width: 990px; height: inherit; margin: 0 auto; /* background: rgba(255,255,255,.3); */} /* 높이는 부모한테 상속받음 */
+
+/* 레이아웃 */
+#wrap{width: 100%;} /* 높이는 얼마만큼 늘어날지 모르니까 넓이만 */
+#header{width: 100%; height: 325px; background: url(../img/header_bg.jpg) repeat-x center top;} /* cover하면 비율 줄여도 100퍼로 채워짐(no-repeat) 또는 옆의 방법 사용 */
+#contents{width: 100%; height: auto;} /* 처음에 임의로 1000px 주고 컨텐츠안의 영역들 높이 주면 auto로 바꿔주기 */
+#footer{width: 100%; height: auto; background: #fff;}
+
+/* 헤더영역 */
+.header-menu{text-align: right;}
+.header-menu a{display: inline-block; padding: 10px 0 10px 13px; color: #fff;font-size: 14px;}
+.header-menu a:hover{color: rgb(122, 136, 200);}
+.header-tit{text-align: center;}
+.header-tit h1{background: #fff; padding: 5px 20px; margin-top: 60px; display: inline-block; font-size: 28px; color: #333; text-transform: uppercase; box-shadow: 5px 5px 10px #000; word-spacing: 20px; position: relative} /* 글자간격은 레터스페이싱 */
+.header-tit h1:after{content:"hyeri's"; display: inline-block; background: #fff; padding: 5px 20px; margin-top: -5px; box-shadow: 5px 5px 10px #000; position: absolute; top:50%; left: 50%; transform: translate(-50%, 50%); font-size: 15px; color: #333;}
+
+/* 본문영역 */
+/* 메뉴영역 */
+.cont_nav{display: none; background: #dcdcdc; overflow: hidden;}
+/*.cont_nav{height: 230px; background: #dcdcdc;}  처음엔 이렇게 쓰고 위로 수정함*/
+.nav{padding: 30px 0;}
+.nav>div{float: left; width: 40%;}
+.nav>div:last-child{width: 20%;}
+.nav>div h3{font-size: 18px; color: #18bacb; margin-bottom: 5px;}
+.nav>div ul li{width: 50%; float: left;}
+.nav>div:last-child ul li{width: 100%;}
+.nav>div ul li a:hover{text-decoration: underline;}
+
+/* 본문 타이틀영역 */
+.cont_tit{height: 70px; background: #fff;}
+.tit{position: relative;}
+.tit h2{text-align: center; font-family: 'Nanum Brush Script', cursive; font-size: 40px; color: #8a8a7b; padding: 5px 0;}
+.tit .btn{position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat 0 -600px;}
+.tit .btn.on{background-position: 0 -660px;}
+/* 누르면 방향 아이콘 바뀜. script.js가서 체크.  */
+
+/* 본문 배너영역 */
+.cont_banner{background: #ccc;}
+.banner{position: relative; padding: 24px 0 20px;}
+.banner .prev{position: absolute; left: -50px; width: 43px; height: 43px; background: url(../img/icon.png) no-repeat -150px 0; top: 50%; transform: translateY(-50%);}
+.banner ul:after{content: ""; display: block; clear: both;}
+.banner ul li{float: left; width: 330px;}
+.banner ul li.ban_img1{text-align: left;}
+.banner ul li.ban_img2{text-align: center;}
+.banner ul li.ban_img3{text-align: right;}
+.banner ul li img{border: 4px solid #dcdcdc;}
+.banner ul li img:hover{border: 4px solid #98bcdc;}
+
+.banner .next{position: absolute; right: -50px; width: 43px; height: 43px; background: url(../img/icon.png) no-repeat -150px -43px; top: 50%; transform: translateY(-50%);}
+
+/* 본문 본문영역 */
+.cont_content{ background: #f3f3f3;} /* height: 816px; 높이 지웠음 */
+.content{overflow: hidden; padding-top: 30px;}
+.content .column{float: left; width: 269px; height: 363px; margin: 0 30px 30px 0; padding:20px; background: #fff; position: relative;}
+.content .column:nth-child(3n){margin-right: 0;}
+.content .column .ico_img{width: 60px; height: 60px; display: block; background: url(../img/icon.png) no-repeat 0 0; position: absolute; top: 20px; left: 20px;} /* span이라 블럭줌 */
+/* 블럭이라 다 차지하니까 플루레프트 or 포지션주기 */
+.content .column .ico_tit{padding-left: 70px; font-size: 16px; color: #2c94c4;}
+.content .column .ico_desc{padding-left: 70px; border-bottom: 1px solid #d0d0d0; padding-bottom: 15px; margin-bottom: 15px;}
+.content .column .notice{position: relative;}
+.content .column .notice h4{font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.content .column .notice ul li{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px; line-height: 160%;} /* 노랩은 줄바꿈하지마라.앨립스는 글자 초과하면 ...으로. 둘다 같이 써야함 */
+.content .column .notice ul>li>a{font-size: 12px;}
+.content .column .notice .more{position: absolute; width: 17px; height: 17px; background: url(../img/icon.png) no-repeat -150px -90px; display: block; right: 0; top: 0;}
+.content .column .notice2{margin-top: 10px;}
+.content .column .notice2 ul > li{ white-space: normal; text-overflow: clip; }
+.content .column .notice2 ul>li>a{display: block; width: 65%; float: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.content .column .notice2 ul>li>span{display: block; width: 30%; float: right;}
+
+/* 게시판3 */
+.content .col2 .ico_img{background-position: 0 -300px;}
+.content .col2 .notice3 h4{font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.content .col2 .notice3 ul li{position: relative; padding: 8px 0 14px 60px;}
+.content .col2 .notice3 ul li a img{width: 50px; position: absolute; top: 0; left: 0; border: 1px solid #0093bd;}
+.content .col2 .notice3 ul li a strong{display: block;}
+.content .col2 .notice3 ul li a span{display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+
+
+/* 게시판4 */
+.content .col3 .ico_img{background-position: 0 -360px;}
+.content .col3 .notice4 h4{font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice4 .login-wrap{margin-bottom: 15px;}
+.notice4 .login-wrap .login_header{overflow: hidden; margin-bottom: 10px;}
+.notice4 .login-wrap .login_header .lh_check{float: left; margin-right: 10px;}
+.notice4 .login-wrap .login_header .lh_ip{float: left;}
+.notice4 .login-wrap .login_header .lh_ip em{text-decoration: underline; color: #0093bd;}
+.notice4 .login-wrap .login_content{overflow: hidden; margin-bottom: 10px;}
+.notice4 .login-wrap .login_content .lc_text{float: left; width: 76%;}
+.notice4 .login-wrap .login_content .lc_text input{width: 100%; margin-bottom: 2px; border: 1px solid #ddd; padding: 3px 5px; box-sizing: border-box;}
+.notice4 .login-wrap .login_content .lc_btn{float:right; width: 22%; height: 57px;}
+.notice4 .login-wrap .login_footer ul li{float: left; margin-right: 5px;}
+.notice4 .login-wrap .login_footer ul li a:hover{color: #0093bd;}
+
+.popup-img{margin-top: 25px;}
+.popup-img ul{overflow: hidden;}
+.popup-img ul li{float: left; width: 86px; margin-right: 5px;}
+.popup-img ul li:last-child{margin-right: 0;}
+.popup-img ul li img{width: 100%; border: 1px solid #0093bd;}
+
+.pop{position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,.5); top:0; left: 0; display: none;}
+/* none 시켜주고 스크립트 */
+.pop .pop-wrap{width: 500px; height: 500px; background: #fff; padding: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 99999;}
+.pop .pop-wrap img{width: 100%;}
+
+/* 게시판5 */
+.content .col4 .ico_img{background-position: 0 -420px;}
+.content .col4 h4{font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+
+.hover1{overflow: hidden;}
+.hover1 li{float: left; width: 86px; margin-right: 5px;}
+.hover1 li:last-child{margin-right: 0;}
+.hover1 li a{display: block; text-align: center;}
+.hover1 li a span{position: relative; display: block; overflow: hidden; margin-bottom: 10px;}
+.hover1 li a span img{width: 100%; display: block;}
+.hover1 li a span em{display: block; position: absolute; width: 100%; height: 0; top: 0; left: 0; background: rgba(0,0,0,.6); color: #fff; text-align: center; line-height: 86px; overflow: hidden; transition: height .5s;} 
+/* 높이값이 없으면 보이지마(오버플로우 히든, 높이 0) */
+.hover1 li a:hover span em{height: 86px;}
+.hover1 li a strong:hover{color: #0093bd;}
+
+.hover2{margin-top: 10px;} /* 마진 먹히게 하려면 호버1에 오버플로우 히든줘야함 */
+.hover2 li{float: left; width: 86px; margin-right: 5px;}
+.hover2 li:last-child{margin-right: 0;}
+.hover2 li a{display: block; text-align: center;}
+.hover2 li a span{position: relative; display: block; overflow: hidden; margin-bottom: 10px;}
+.hover2 li a span img{width: 100%; display: block;}
+.hover2 li a span em{display: block; position: absolute; width: 100%; height: 0; bottom: 0; left: 0; background: rgba(0,0,0,.6); color: #fff; text-align: center; line-height: 25px; overflow: hidden; transition: height .5s;} 
+/* 높이값이 없으면 보이지마(오버플로우 히든, 높이 0) */
+.hover2 li a span:hover em{height: 25px;}
+.hover2 li a strong:hover{color: #0093bd;}
+
+/* 탭메뉴 */
+.content .col5 .ico_img{background-position: 0 -480px;}
+.content .col5 h4{font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.tab_menu{position: relative; border: 1px solid #ddd; height: 100px; padding: 10px; overflow: hidden; top: 10px;} 
+.tab_menu>ul::after{content: ""; display: block; clear: both;}
+.tab_menu>ul{border-bottom: 1px solid #ddd; }
+.tab_menu>ul>li{float: left; border: 1px solid #ddd; margin-left: -1px; margin-bottom: -1px;}
+.tab_menu>ul>li.active>a{background: #0093bd; color: #fff;}
+.tab_menu>ul>li>a{padding: 3px 7px; display: block; font-size: 11px;}
+.tab_menu>ul>li>ul{position: absolute; top: 40px; left:10px; }
+.tab_menu>ul>li>ul>li{ width: 240px; line-height: 180%; background: url(../img/dot.gif) no-repeat 2px 9px; padding-left: 8px;} /* 넓이를 잡아야 나옴 */
+.tab_menu>ul>li>ul>li>a{text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block;}/* 여기에 블럭하면 부모가 높이를 가짐 */
+
+.notice5{position: relative; border: 1px solid #ddd; top: 25px;}
+.notice5 h4{border-bottom: 1px solid #ddd; padding: 10px;} /* 얘한테 패딩줘야 줄이 끝까지 이어짐.ul에도 패딩줘야 안의 공간 확보. 노티스5에 주면 안됨 */
+.notice5 h4 em{color: rgb(231, 47, 222);}
+.notice5 ul{padding: 10px;}
+.notice5 ul li{line-height: 180%;}
+.notice5 ul li a{width: 68%; float: left; display: block; font-size: 12px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.notice5 ul li span{width: 30%; float: right; display: block; font-size: 12px;}
+/* 이때 float때문에 띄어져있어 줄이 작아지는데 이때 html ul class=cf 넣어주면 줄 안에 들어감 */
+.notice5 .more{position: absolute; width: 17px; height: 17px; background: url(../img/icon.png) no-repeat -150px -90px; display: block; right: 10px; top: 10px;}
+.content .column .notice2{margin-top: 10px;}
+
+/* 슬라이드 */
+.content .col6 .ico_img{background-position: 0 -540px;}
+.slide{border: 1px solid #ddd; padding: 10px;}
+.slide h4{font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold; float: left;}
+.slide .slide_btn{float: right; width: 108px; height: 25px;}
+.slide .slide_btn ul{overflow: hidden;}
+.slide .slide_btn ul li{float: left; margin: 1px 2px;}
+.slide .slide_btn ul li a{display: block; width: 23px; height: 23px; background: url(../img/icon.png) no-repeat ;}
+.slide .slide_btn ul li.gb_icon1 a{background-position: -150px -120px;}
+.slide .slide_btn ul li.gb_icon2 a{background-position: -150px -143px;}
+.slide .slide_btn ul li.gb_icon3 a{background-position: -150px -166px;}
+.slide .slide_btn ul li.gb_icon4 a{background-position: -150px -189px;}
+.slide .slide_btn ul li.gb_icon1:hover a{background-position: -173px -120px;}
+.slide .slide_btn ul li.gb_icon2:hover a{background-position: -173px -143px;}
+.slide .slide_btn ul li.gb_icon3:hover a{background-position: -173px -166px;}
+.slide .slide_btn ul li.gb_icon4:hover a{background-position: -173px -189px;}
+.slide .slide_img{border-top: 1px solid #ddd; position: relative; top: 35px; height: 250px;}
+.slide .slide_img ul{position: relative; top: 20px; overflow: hidden;width: 100%; height: 200px;}
+.slide .slide_img ul li{position: absolute; top: 0; left: 100%; width: 100%; height: 100%;} /* ul에 렐라티브 주어서 이미지 다 겹침 */
+.slide .slide_img ul li:first-child{left: 0;}
+.slide .slide_img ul li a{display: block;}
+.slide .slide_img ul li a img{width: 100%;}
+
+
+/* 하단영역 */
+.footer{padding: 50px 0;}
+.footer>ul{text-align: center; margin-bottom: 20px;}
+.footer>ul>li{display: inline-block; padding: 0 10px; position: relative}
+.footer>ul>li:not(:last-child)::after{content: ""; position: absolute; top: 5px; right: 0; width: 1px; height: 10px; background: #ddd;}
+.footer>ul>li>a{display: block;}
+.footer>address{text-align: center;}
+.w3c{text-align: center; margin-top: 20px;}
+
+/* 스와이퍼 */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

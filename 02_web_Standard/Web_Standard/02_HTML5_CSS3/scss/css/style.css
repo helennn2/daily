@@ -1,0 +1,233 @@
+@charset "UTF-8";
+body {
+  padding-bottom: 100px;
+  width: 1000px;
+  margin: 0 auto;
+  background: #eee;
+}
+
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 50px;
+}
+
+/* 1. 변수 영문, 영문+숫자, 영문-, _소문자 */
+.btn1 {
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #666;
+  background: #fff;
+  border: 1px solid gray;
+  text-align: center;
+}
+.btn1:hover {
+  background: #666;
+  color: #fff;
+}
+
+.btn2 {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid rgb(237, 31, 31);
+  background: rgb(46, 46, 199);
+}
+.btn2:hover {
+  background: rgb(237, 31, 31);
+}
+
+/* 2. 자식 선택자 종속 선택자 */
+.sass {
+  color: rgb(237, 31, 31);
+}
+.sass ul {
+  border: 1px solid rgb(237, 31, 31);
+}
+.sass ul li {
+  background: pink;
+  margin-bottom: 5px;
+}
+.sass ul li a {
+  text-decoration: none;
+}
+.sass ul li a:hover {
+  color: rgb(237, 31, 31);
+}
+.sass ul li a.bbb {
+  font-size: 12px;
+}
+.sass ul li .bbb {
+  text-decoration: underline;
+}
+.sass ul li:last-child {
+  border: 1px dotted rgb(46, 46, 199);
+}
+
+/* 3. mixin, include */
+.test, .last, .first {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(237, 31, 31);
+  box-shadow: 2px 2px 2px #222;
+}
+
+.clearfix {
+  border: 3px solid rgb(46, 46, 199);
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clearfix p {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(237, 31, 31);
+  box-shadow: 2px 2px 2px #222;
+  margin-right: 10px;
+}
+
+/* 4. 매개변수 */
+.var {
+  border: 1px solid blue;
+}
+
+.red {
+  border: 1px solid rgb(238, 33, 33);
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.var2 {
+  width: 300px;
+  height: 100px;
+  background: yellow;
+}
+
+.var3 {
+  width: 500px;
+  height: 100px;
+  background: yellowgreen;
+}
+
+/* 5. 문자보관 */
+div.string1 {
+  border: 1px solid yellowgreen;
+}
+
+.string2 {
+  border-bottom: 10px solid red;
+}
+
+.string3 {
+  border-left: 10px solid rgb(143, 208, 149);
+  border-right: 10px solid rgb(143, 208, 149);
+}
+
+/* 6. for 반복문 */
+.list li {
+  background: no-repeat 0 0/20px 30px;
+  text-indent: 30px;
+  line-height: 50px;
+}
+
+/* .list li.ico1{background-image: url(../img/ico1.png);}
+.list li.ico2{background-image: url(../img/ico2.png);}
+.list li.ico3{background-image: url(../img/ico3.png);}
+.list li.ico4{background-image: url(../img/ico4.png);}
+.list li.ico5{background-image: url(../img/ico5.png);} */
+.list li.ico1 {
+  background-image: url(../img/ico1.png);
+}
+
+.list li:nth-child(1)::before {
+  content: "하이염 1";
+}
+
+.list li.ico2 {
+  background-image: url(../img/ico2.png);
+}
+
+.list li:nth-child(2)::before {
+  content: "하이염 2";
+}
+
+.list li.ico3 {
+  background-image: url(../img/ico3.png);
+}
+
+.list li:nth-child(3)::before {
+  content: "하이염 3";
+}
+
+.list li.ico4 {
+  background-image: url(../img/ico4.png);
+}
+
+.list li:nth-child(4)::before {
+  content: "하이염 4";
+}
+
+.list li.ico5 {
+  background-image: url(../img/ico5.png);
+}
+
+.list li:nth-child(5)::before {
+  content: "하이염 5";
+}
+
+/* 7. each문 */
+.ico_book {
+  background: url(../img/book.png) no-repeat;
+  text-indent: 80px;
+}
+
+.ico_zoom {
+  background: url(../img/zoom.png) no-repeat;
+  text-indent: 80px;
+}
+
+.ico_new {
+  background: url(../img/new.png) no-repeat;
+  text-indent: 80px;
+}
+
+h1 {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 11px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+/* 8. 조건문 */
+.btn {
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.if {
+  width: 300px;
+  height: 300px;
+  background: yellowgreen;
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=style.css.map */

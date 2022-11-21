@@ -1,0 +1,33 @@
+*{margin: 0; padding: 0;}
+
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+.nav{padding: 10px;}
+.nav>ul{width: 800px; margin: 0 auto; position: relative;}
+.nav>ul:after{content: ""; clear: both; display: block;}
+.nav>ul>li{float: left; }
+.nav>ul>li>a{padding: 10px 40px; display: block; font-size: 1.2em; font-weight: bold; color: rgb(67, 52, 202);}
+.nav>ul>li:hover>a{color: rgb(26, 25, 110); text-shadow: 0 0 2px rgb(135, 123, 123);}
+/* li옆에다가 호버 하면 마우스아래까지 */
+.nav>ul>li>ul{position: absolute; left: 0; top: 46px; background: rgb(91, 95, 217); display: none;}
+.nav>ul>li:hover>ul{display: block;}
+.nav>ul>li:nth-child(2)>ul{left: 100px;}
+.nav>ul>li:nth-child(3)>ul{left: 20px;}
+.nav>ul>li:nth-child(4)>ul{left: 100px;}
+.nav>ul>li:nth-child(5)>ul{left: 150px;}
+.nav>ul>li>ul>li{float: left;}
+.nav>ul>li>ul>li>a{padding: 15px 20px; display: block; color: #fff;}
+/* 투뎁스한테 디스플레이 논, 원뎁스에 블럭해줌 */
+
+
+
+/* 
+.nav{width: 800px;height: 50px; margin: 50px auto;}
+.nav>ul{margin-left: 20px;}
+.nav>ul>li{float: left; width: 150px; margin-right: 1px; text-align: center; }
+.nav>ul>li>a{color: rgb(19, 115, 183); opacity: .7; padding: 14px 0px; display: block;}
+.nav>ul>li>a:hover{opacity: 1; }
+.nav>ul>li>ul{margin-left: 35px; display: none; position: absolute; width: 800px; }
+.nav>ul>li:hover>ul{display: block; }
+.nav>ul>li>ul li{width: 110px; background-color: cadetblue; float: left;}
+.nav>ul>li>ul li a{color: #fff; padding: 8px 3px; display: block; } */

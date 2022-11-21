@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 슬라이드 문제</title>
+</head>
+<body>
+    <div class="num-animation" data-num="90"></div>
+    <div class="num-animation1" data-num="60"></div>
+    <div class="num-animation2" data-num="40"></div>
+    <script>
+        const numAnimation=document.querySelector('.num-animation');
+        let num=0;
+        let targetNum=numAnimation.getAttribute('data-num');
+
+        let timer=setInterval(function(){
+            ++num;
+            numAnimation.innerText=num;
+            if(num==targetNum){
+                clearInterval(timer);
+            }
+        },10);
+
+        const numAnimation1=document.querySelector('.num-animation1');
+        let num1=0;
+        let targetNum1=numAnimation1.getAttribute('data-num');
+
+        let timer1=setInterval(function(){
+            ++num;
+            numAnimation1.innerText=num;
+            if(num==targetNum1){
+                clearInterval(timer1);
+            }
+        },10);
+
+      /*   const numAnimation2=document.querySelector('.num-animation2');
+        let num2=0;
+        let targetNum2=numAnimation2.getAttribute('data-num');
+
+        let timer2=setInterval(function(){
+            ++num;
+            numAnimation2.innerText=num;
+            if(num==targetNum2){
+                clearInterval(timer2);
+            }
+        },10);
+ */
+        console.log(targetNum)
+    </script>
+</body>
+</html>

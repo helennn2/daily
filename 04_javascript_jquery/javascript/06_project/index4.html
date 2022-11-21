@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 제어</title>
+    <style>
+        #vplay{display: block; margin-bottom: 50px; border: none; background: gray; padding: 5px 10px; float: left; margin-right: 10px;}
+        #vpause{display: block; margin-bottom: 50px; border: none; background: gray; padding: 5px 10px;}
+    </style>
+</head>
+<body>
+    <button id="vplay">video play</button>
+    <button id="vpause">video pause</button>
+    <video src="video/KakaoTalk_20220714_131619578.mp4" muted id="video"></video>
+    <script>
+        const videos=document.getElementById('video')
+        const videoPlay=document.getElementById('vplay');
+        const videoPause=document.getElementById('vpause');
+
+        videoPlay.addEventListener('click',play1);
+        videoPause.addEventListener('click',pause1);
+
+        function play1(){
+            videos.play();
+        }
+        function pause1(){
+            videos.pause();
+        }
+    </script>
+</body>
+</html>

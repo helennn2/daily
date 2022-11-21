@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border-collapse: collapse; border: 1px solid rgb(237, 162, 162)}
+        th,td{ border: 1px solid rgb(237, 162, 162); padding: 5px 10px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+           $.ajax({
+                url:"data/MOCK_DATA.json", //https://mockaroo.com/
+                dataType:'json',
+                success:function(data){
+                  if(data.length > 0){
+                    let tb=$("<table />");
+                    for(let i in data){
+                        let $id=data[i].id;
+                        let $first_name=data[i].first_name;
+                        let $last_name=data[i].first_name;
+                        let $gender=data[i].gender;
+
+                        let row=$("<tr />").append(
+                                $('<td />').text($id),
+                                $('<td />').text($first_name),
+                                $('<td />').text($last_name),
+                                $('<td />').text($gender)
+                        )
+                        tb.append(row);
+                    }
+                    $('.wrap').append(tb)
+                  }  
+                }
+           });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on, trigger, ready/load, click, preventDefault, hover, each</title>
+    <link rel="stylesheet" href="./css/style6.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./js/script6.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="sec1" class="sec">
+            <h2>on()메서드 첫번째 방법</h2>
+            <button class="btn1">click</button>
+            <div class="on">on메서드를 사용한 이벤트</div>
+            <button class="btn2">버튼</button>
+            <div class="btnOn">그룹메서드</div>
+        </div>
+        <div id="sec2" class="sec">
+            <h2>강제 trigger()메서드</h2>
+            <p><button class="btn3">버튼3</button></p>
+            <p>내용3</p>
+            <p><button class="btn4">버튼4</button></p>
+            <p>내용4</p>
+        </div>
+        <div id="sec3" class="sec">
+            <h2>ready() / load()</h2> <!-- load 윈도우 -->
+            <p><img src="https://place-hold.it/200x300/555/fff/000" alt="img" class="img1"></p>
+        </div>
+        <div id="sec4" class="sec">
+            <h2>click</h2>
+            <div class="div1">div!</div>
+            <div class="div1">div!</div>
+            <div class="div1">div!</div>
+            <div class="div1">div!</div>
+            <div class="div1">div!</div>
+        </div>
+        <div id="sec5" class="sec">
+            <h2>preventDefault() 기본 이벤트 차단</h2>
+            <p><a href="http://www.daum.net" class="btn5">버튼5</a></p>
+            <p class="txt5">내용5</p>
+            <hr>
+            <p><a href="http://www.naver.com" class="btn6">버튼6</a></p>
+            <p class="txt6">내용6</p>
+            <hr>
+            <p><button class="btn7">버튼7</button></p>
+            <p class="txt7">내용7</p>
+        </div>
+        <div id="sec6" class="sec">
+            <h2>hover</h2>
+            <div id="hover">오늘 점심은 설렁탕이래요~</div>
+            <hr>
+            <h2>mouseenter / mouseleave</h2>
+            <!-- enter는 자기 자신만 , over은 하위속성도 해줌. 벗 거의 비슷 -->
+            <div id="mouseenter">비와서 멀리가면 비맞음</div>
+        </div>
+        <div id="sec7" class="sec">
+            <h2>each</h2>
+            <div class="animal">cat</div>
+            <div class="animal">dog</div>
+            <div class="animal">turtle</div>
+            <div class="animal">tiger</div>
+        </div>
+    </div>
+</body>
+</html>

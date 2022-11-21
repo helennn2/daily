@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> Animation </title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+        .box{width: 100px; height: 100px; background-color: cadetblue; border-radius: 50%; position: relative; top: 50px; left: 50px;
+        animation-name: ani; animation-duration: 5s; animation-iteration-count: infinite; animation-direction: alternate;}
+        @keyframes ani {
+            0%{left:50px}
+            100%{left:1700px}
+        }
+        .box1{width: 100px; height: 100px; background-color:rgb(98, 160, 95); border-radius: 50%; position: relative; top: 100px; left: 500px;
+        animation-name: ani1; animation-duration: 2s; animation-delay: 5s; animation-iteration-count: infinite; animation-direction: alternate;}
+        @keyframes ani1 {
+            from{top:100px}
+            to{top:800px}
+        }
+        .box2{width: 100px; height: 100px; background-color: rgb(95, 98, 160); border-radius: 50%; position: relative; top: 70px; left: 800px;
+        animation: ani2 2s ease-in infinite alternate;}
+        @keyframes ani2 {
+            0%{left:800px; background-color: rgb(95, 98, 160); border-radius: 50%;}
+            10%{left: 1500px;}
+            11%{left: 1500px;}
+            100%{left:0px; background: rgb(95, 98, 160); border-radius: 00%;}
+        }
+        .box3{width: 60px; height: 60px; position: relative; top: 400px; left: 50%; background-color: darkorange; animation: rotate 1.5s infinite, background 1.5s infinite alternate;}
+        @keyframes rotate {
+            from{transform: perspective(120px) rotateX(0deg) rotateY(0deg) }
+            50%{transform: perspective(120px) rotateX(-180deg) rotateY(0deg)}
+            to{transform: perspective(120px) rotateX(-180deg) rotateY(-180deg)}
+        }
+        @keyframes background {
+            from{background-color:darkorange ;}
+            50%{background-color: aquamarine;}
+            to{background-color: brown;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

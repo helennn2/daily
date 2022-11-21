@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1 class="tit1"></h1>
+        <h1 class="tit1"></h1>
+        <h2 class="tit2"></h2>
+        <h2 id="tit1"></h2>
+        <h2 id="tit2"></h2>
+    </div>
+    <script>
+        document.getElementsByClassName('tit1')[0].innerHTML=`안녕하세요`;
+        document.getElementsByClassName('tit1')[1].innerHTML=`방가방가`;
+        document.querySelector('.tit1').style.color=`#f00`;
+        document.querySelector('.tit2').innerHTML=`이거 내용 넣고 꾸밀거임`;
+        const tit2Style=`font-size:15px; color:#f00;`;
+        document.querySelector('.tit2').style=tit2Style;
+
+
+        //삼항연산자
+        let jumsoo=75;
+        let e=jumsoo>=80 ? '합격' : '불합격';
+        const tit2=document.querySelector('.tit2');
+        tit2.innerHTML=e;
+
+    </script>
+</body>
+</html>

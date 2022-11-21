@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문-조건문(if~else)</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script>
+        var your_gender="여자";
+        document.write("당신은"+your_gender+"이므로");
+        if(your_gender=="남자"){document.write("반바지를 입으세요","<br><hr>")}
+        if(your_gender=="여자"){document.write("긴바지를 입으세요","<br><hr>")}
+
+        /* var walkAmount=prompt("당신의 하루 걷는 양은 몇 보인가요?","");
+
+        if(walkAmount>=10000) {document.write("당신은 매우 좋은 습관을 지니고 계시는군요!")}
+        document.write("=======end========") */
+
+        /* var a3=prompt("70점?","");
+        var result=a3>=70? "많이 사용하는 편이네요":"=====end=======";
+        document.write(result); */
+
+        /* var myAge=prompt("당신의 나이는?","");
+        if(myAge>=20&&myAge<30){
+            document.write("20대")
+        }else{
+            document.write("안가르켜줌")
+        }; */
+
+        var score=70;
+
+        document.write(`당신이 취득한 점수는 ${score} 점이므로 `);
+        if(score>=90) document.write("A 학점입니다.")
+        else if(score>=80) document.write("B 학점입니다.")
+        else if(score>=70) document.write("C 학점입니다.")
+        else if(score>=60) document.write("D 학점입니다.")
+        else document.write("F 학점입니다.")
+
+        /* var num=prompt("당신이 좋아하는 숫자는?","");
+
+        if(num % 2 ==0){
+            document.write("당신이 좋아하는 숫자는 짝수입니다.")
+        }else{
+            document.write("당신이 좋아하는 숫자는 홀수입니다.")
+        } */
+
+        document.write("<br>","<hr>")
+        /* var result=confirm("정말로 회원을 탈퇴하시겠습니까");
+        if(result){
+            document.write("탈퇴처리 되었습니다.")
+        }else{
+            document.write("탈퇴 취소되었습니다.")
+        }
+ */
+       /*  var mon=prompt("현재는 몇 월입니까?","0");
+        if(mon>=9&&mon<=11){
+            document.write("독서의 계절 가을이네요!");
+        }else if(mon>=6&&mon<=8){
+            document.write("여행가기 좋은 여름이네요!");
+        }else if(mon>=3&&mon<=5){
+            document.write("햇살 가득한 봄이네요!");
+        }else{
+            document.write("스키의 계절 겨울이네요!");
+        } */
+
+        /* document.write("<br>","<hr>")
+        var id="love";
+        var pw="12345";
+
+        var user_id=prompt("아이디?","");
+        var user_pw=prompt("비밀번호?","");
+
+        if(id==user_id){
+            if(pw==user_pw){
+                document.write(user_id+"님 환영합니다.");
+            }else{
+                alert("비밀번호가 일치하지 않습니다.");
+                location.reload();
+            }
+        }else{
+            alert("아이디가 일치하지 않습니다.");
+            location.reload(); 
+        }; */
+
+    </script>
+</body>

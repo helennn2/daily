@@ -1,0 +1,18 @@
+:root{font-size: 13px;}
+*{margin: 0; padding: 0;} 
+html{height: 100%;}
+.clearfix:after{content: ""; display: block; clear: both;}
+body{font-size: 12px; height: 100%;}
+.wrapper{font-size: 8px;}
+.box{background-color: blue; float: left; margin-right: 20px; color: #fff; text-align: center;}
+.box_px{width: 160px; height: 160px;} /* 고정단위 */
+.box_em{width: 10em; height: 10em;} /* 부모의 값에 의해 계속 변경됨 - body 12px 줄 때 부모 기준이라 1em이 12px이 됨, .wrapper{font-size: 8px;}->1em이 8px됨*/
+.box_rem{width: 10rem; height: 10rem;} /* 최상의 루트에서 값이 바뀌면 그 값에 따라감. 문서의 기본값 root 기준. 원래 루트는 16px. :root{font-size: 13px;} -> 130px이 됨*/
+
+p{width: 100vw; height: 100%; background: red; font-size: 1.5rem;} 
+/* vw(화면 끝까지 보여줌)는 %(마진0 패딩0의 값을 빼고 보여줘서 공간이 살짝 남음)랑 거의같다고 보면됨 마진 0패딩 0하면 %도 꽉 채워줌. 
+높이는 부모인 바디에 높이를 100%주고, html에는 높이를 100%줘야 100%가 먹힘*/
+/* 높이에 그냥 100vh주면 html, body 안줘도 100%먹힘 */
+/* 폰트 사이즈는 19.5px(루트*1.5) */
+span{font-size: .8em;}
+/* 폰트 사이즈 15.6px */

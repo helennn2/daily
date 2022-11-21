@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position의 종류</title>
+    <style>
+        .box{width: 200px; height: 100px;}
+        .position1{background: rgb(106, 188, 51); position: absolute; top:0; left:0;}
+        .position2{background: skyblue; position: absolute; top:0; right: 0;}
+        .position3{background: rgb(55, 4, 61); position: absolute; bottom: 0; left: 0;}
+        .position4{background: rgb(169, 67, 16); position: absolute; bottom: 0; right: 0}
+        .position5{background-color: aqua; position: absolute; top:50%; left:50%; margin-left: -100px; margin-top: -50px; }
+        .position6{background-color: blue; position: absolute; top:214px; left:364px;}
+        .position7{width: 400px; height: 200px; background-color: rgb(206, 128, 79); position: absolute; top:250px; left:1100px;}
+        .position8{width: 1200px; height: 400px; background: yellowgreen; position: relative; z-index: 0; margin: 0 auto;}
+        .relative{width: 100px; height: 100px; background: green; position: absolute; top:0; left:0;}
+    </style>
+</head>
+<body>
+    <div class="box position1"></div>
+    <div class="box position2"></div>
+    <div class="box position3"></div>
+    <div class="box position4"></div>
+    <div class="box position5"></div>
+    <div class="box position6"></div>
+    <div class="box1 position7"></div>
+
+    <div class="box2 position8">
+        <div class="relative"></div>
+    </div>
+</body>
+</html>

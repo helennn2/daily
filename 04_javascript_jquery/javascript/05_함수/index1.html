@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시 실행 함수</title>
+</head>
+<body>
+    <script>
+        document.write("<h3>기명즉시실행함수</h3>");
+        (function square(x){
+            document.write(x*x, "<br><hr>");
+        })(2);
+
+        (function square(y){
+            document.write(y*y, "<br><hr>");
+        }(2));
+
+        document.write("<h3>익명즉시실행함수</h3>");
+        (function (z){
+            document.write(z*z, "<br><hr>");
+        })(3);
+
+        (function (e){
+            document.write(e*e, "<br><hr>");
+        })(3);
+
+        document.write("<h3>변수에 즉시 실행함수 저장</h3>");
+        (myFnc=function(r){
+            document.write(r*r, "<br><hr>");
+        })(5);
+        myFnc(6); //변수에 넣어도 바로 가능
+
+        var myFnc2=(function(t){
+            return t*t;
+        })(2);
+        document.write(myFnc2);
+
+
+    </script>
+</body>
+</html>

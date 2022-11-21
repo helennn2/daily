@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> 그라데이션 메뉴바 만들기 </title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			body {
+				font:0.95em Arial,sans-serif;
+				margin:50px 0px;
+				}
+			h1 {
+				text-shadow:0px 0px 5px #666;
+				text-align:center;
+				font-size:3em;
+				letter-spacing:5px;
+				color:#d81b21;
+				text-transform:uppercase;
+				}
+			/* Gradient Menu Bar */
+      nav{
+         background-image: linear-gradient(to bottom, #ed1c24, #aa1317);
+      }
+      #topNav{
+         list-style: none;
+         height: 45px;
+         width: 788px;
+         margin: 0 auto;
+         padding:0;
+
+      }
+      #topNav li{float: left;}
+      #topNav li a{
+         display: block;
+         text-decoration: none;
+         font-size: 1.2em;
+         font-weight: bold;
+         padding:11px 13px 11px 13px;
+         text-transform: uppercase;
+         letter-spacing: -1px;
+      }
+      #topNav li a:after{
+         content:"/";
+      }
+      #topNav li a:hover{
+         background: linear-gradient(to bottom, #888, #575757);
+         color: #fff
+      }
+				/* nav{background:linear-gradient(to bottom, rgb(129, 67, 67),rgb(189, 22, 22));}
+				#topNav{list-style: none; padding: 0px; width: 800px; height: 45px; margin: 0 auto;}
+				#topNav li{float: left; display: inline;}
+				#topNav li a{display: block; text-decoration: none; color: #fff; font-weight: bold; font-size: 1.3em; padding: 11px 13px 11px 13px; letter-spacing: -1px; text-transform: uppercase;}
+				#topNav li a:after{content: "/";}
+				#topNav li a:hover{background: linear-gradient(to bottom, #888, #575757); color: #fff;} */
+
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>C/S/S/   s/h/o/e/s -  s/h/o/p</h1>
+		</header>
+		<nav>
+			<ul id="topNav">
+				<li><a href="">best 50</a></li> 
+				<li><a href="">high heel</a></li>  
+				<li><a href="">casual</a></li> 
+				<li><a href="">flat</a></li> 
+				<li><a href="">boots</a></li> 
+				<li><a href="">sandal</a></li> 
+				<li><a href="">bag</a></li> 
+				<li><a href="">acc</a></li> 
+				<li><a href="">sale</a></li> 
+			</ul>
+		</nav>
+	</body>
+</html>

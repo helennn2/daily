@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀 함수 호출</title>
+</head>
+<body>
+    <script>
+        let num=0; //var과 비슷한 건 let
+
+        
+        function testFnc(){
+            num++;
+            document.write(num, "<br>");
+
+            if(num==10){return}
+            testFnc()
+        }
+        testFnc();
+
+        document.write("--------------------------<br>");
+        var score=10; //이거 없애면 50만 나오고 안나옴.
+
+        function myFnc(){
+            var score=50;
+            document.write(score,"<br>");
+        }
+        myFnc();
+        document.write(score,"<br>");
+
+        document.write("--------------------------<br>");
+        let score1=10;
+        /* let score1=30; */ //var은 바꿔서 가능하지만 let은 해도 안바뀜
+
+        function myFnc1(){
+            let score1=50;
+            document.write(score1,"<br>");
+        }
+        myFnc1();
+        document.write(score1);
+
+
+        function myfunction(){
+            alert("전역함수")
+        }
+        function outerFnc(){
+            function myfunction(){
+                alert("지역함수")
+            }
+            myfunction()
+        }
+        outerFnc();
+        myfunction();
+    </script>
+</body>
+</html>

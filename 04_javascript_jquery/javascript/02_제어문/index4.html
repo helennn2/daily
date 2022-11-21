@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문 사용하여 내용 입력하기</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    <h2>for</h2>
+    <ul id="for"></ul> <!-- ul은 클래스 찾기 어려워서 아이디로. 자바스크립트로 li로 넣어줄 것 -->
+    <hr>
+
+    <h2>forEach</h2>
+    <ul id="forEach"></ul>
+    <hr>
+
+    <h2>for of</h2>
+    <ul id="forOf"></ul> 
+    <hr>
+
+    <h2>for in</h2> <!-- 얘는 객체 -->
+    <ul id="forIn"></ul> 
+    <hr>
+
+    <h2>do / while</h2>
+    <ul id="doWhile"></ul> 
+    <hr>
+
+    <script>
+        var fruits=["cherry","apple","banana"]; //배열구조는 대괄호 안에 들어옴
+
+        //for
+        for(var i=0; i<fruits.length; i++){
+            document.getElementById('for').innerHTML+='<li>'+fruits[i]+'</li>' //inner'HTML'은 태그를 가져오는거
+        }
+
+        //foreach
+        fruits.forEach(function(item, index){ //index 는 번호를 나타냄
+            document.getElementById('forEach').innerHTML+='<li>'+item+'</li>'
+        }) //위에 있는 for는 옛날 방식이고, 요즘은 foreach로 씀
+
+        //for of
+        var item;
+        for(item of fruits){
+            document.getElementById('forOf').innerHTML+='<li>'+item+'</li>'
+        }
+
+        //for in 배열에서 사용x, 객체 내의 값들마다 할 일(변수(property)+함수(method))
+        var person={pname:'박혜리', page:'25', pgender:'여성'}
+        var x;
+        for(x in person){
+            document.getElementById('forIn').innerHTML+='<li>'+x+":"+person[x]+'</li>'
+        }
+
+        //do while
+        var y=0;
+        do{
+            document.getElementById('doWhile').innerHTML+='<li>'+fruits[y]+'</li>';
+            y++;
+        }while(y<fruits.length)
+
+    </script>
+</body>
+</html>

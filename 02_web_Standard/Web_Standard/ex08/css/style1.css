@@ -1,0 +1,18 @@
+body{line-height: 1.5;}
+.container{
+    width: 75%;
+    margin: 0 auto;
+/*     columns: 20rem 3; */
+/*     column-width: 20rem; */
+    /* height: 60vh; */ /* %의 역할로 3개 지정한 거 무시하고 들어감 */
+}
+
+img{width: 100%;}
+
+@media screen and (min-height:400px) {
+    .container{
+        columns:3;
+        column-rule: 1px dashed red;
+        column-gap: 50px;
+    }
+}

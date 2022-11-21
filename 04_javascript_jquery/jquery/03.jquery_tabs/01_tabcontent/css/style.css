@@ -1,0 +1,74 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.tabSet{ display: flex;}
+.tabSet .tabs{list-style: none;  display: flex; width: 200px; flex-direction: column;}
+.tabSet .tabs li{flex-basis: 85px;}
+.tabSet .tabs li a{display: block; width: 202px; height: 76px; background: #f2f2f2; text-decoration: none; box-sizing: border-box; color: rgb(87, 83, 83); padding: 30px 0 0 28px; font-size: 18px; font-weight: 500;}
+.tabSet .tabs li a.on{background: #db2950; color: #fff;}
+.tabSet .panels{margin-left: 28px; width: 554px; overflow: hidden; height: 410px; border: 1px solid #e7e7e7;}
+.tabSet .panels .panels_wrap{}
+.tabSet .panels .panels_wrap #panel01{width: 554px; height: 410px;}
+.tabSet .panels .panel{position: absolute; width: 554px;}
+.tabSet .panels .panel ul{list-style: none;}
+.tabSet .panels .panel ul li{border-bottom: 1px solid #e7e7e7; height: 82px; line-height: 82px; width: 554px; padding-left: 18px; box-sizing: border-box;}
+.tabSet .panels .panel ul li:last-child{border: none;}
+.tabSet .panels .panel ul li a{font-size: 17px; font-weight: 400; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 250px;}
+.tabSet .panels .panel ul li span{display: block; width: 20%; float: right; color: #999; font-size: 15px; font-weight: 400; margin-top: -84px;}
+
+/* *{margin: 0; padding: 0;}
+.all{width: 610px; margin: 50px auto;}
+.all .tabSet{margin-bottom: 10px;}
+.all .tabSet .tabs{list-style: none;  display: flex;}
+.all .tabSet .tabs li{flex-basis: 100px; text-align: center; margin-right: 1px;}
+.all .tabSet .tabs li a{display: block; padding: 10px; width: 100%; background: paleturquoise; text-decoration: none; box-sizing: border-box; text-transform: uppercase; color: rgb(87, 83, 83); font-weight: bold;}
+.all .tabSet .tabs li a.on{background: rgb(77, 148, 148);}
+.all .tabSet .panels{position: relative; background: rgb(200, 238, 239); padding: 30px; height: 150px; box-sizing: border-box;}
+.all .tabSet .panels .panel{position: absolute; width: 550px;} */

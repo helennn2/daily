@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react 설치 및 컴포넌트 생성과 사용</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- 리액트 웹개발 오픈소스 -->
+    <!-- 링크 https://ko.reactjs.org/docs/add-react-to-a-website.html -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+    <!-- 1. html 돔  -->
+    <div id="root"></div>
+    <div id="root1"></div>
+    <div id="foot"></div>
+
+    <!-- 2. 리액트 컴포넌트 생성하기 -->
+    <script type="text/babel">
+        class WrapComponent extends React.Component{  /* 리액트는 앞에 대문자 써야함 */
+            render(){
+                return( /* 아래 div. 한 태그 안에 만들어야함 / 스타일 줄 때 중괄호 두번 */
+                    <div id='wrap' style={{width:'100%', height:'100vh', display:'flex', background:'#f7f7f7'}}>  
+                        <h2 style={{margin:'auto', fontSize:'70px', color:'#39c'}}>{this.props.title}</h2>
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{this.props.sub}</h3>
+                    </div>
+                );
+            }
+        }
+
+        class SectionComponent extends React.Component{
+            static defaultProps = {
+                title:'SECTION Component',
+                sub:'Component',
+                kor:100,
+                eng:99,
+                mat:100
+            }
+            render(){
+                let {title, sub, kor, eng, mat} = this.props;
+                return(
+                    <section id="section"  style={{margin:'auto', fontSize:'70px', color:'#39c'}}>
+                        <h2 style={{margin:'auto', fontSize:'70px', color:'#39c'}}>{title}</h2>    
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{sub}</h3>    
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{kor}</h3>    
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{eng}</h3>    
+                        <h3 style={{margin:'auto', fontSize:'50px', color:'#000'}}>{mat}</h3>    
+                    </section>
+                );
+            }
+        }
+
+        class FootComponent extends React.Component {
+            render(){
+                let {title, sub, tel, email} = this.props;
+                return( /* 아래 푸터는 태그처럼 보이는 가짜 태그임. jsx문법. 여기는 스타일 중괄호 한번만 쓰는데 이미 푸터스타일 안에 중괄호가 있기 때문 */
+                    <footer id='footer' style={footerStyle}>
+                        <h2 style={footerStyle1}>{title}</h2>
+                        <h3 style={footerStyle2}>{sub}</h3>
+                        <h3 style={footerStyle2}>{tel}</h3>
+                        <h3 style={footerStyle2}>{email}</h3>
+                    </footer>
+                );
+            }
+        }
+
+        FootComponent.defaultProps = {
+            title:'FootComponent',
+            sub:'props',
+            tel:'010-1111-2222',
+            email:'parkri1240@gmail.com'
+        }
+        const footerStyle={
+            width:'100%',
+            height:'100vh',
+            display:'flex',
+            flexFlow:'row wrap',
+            background:'#f7f7f7',
+        }
+        const footerStyle1={
+            margin :'auto',
+            fontSize :'70px',
+            color :'#c39',
+        }
+        const footerStyle2={
+            margin :'auto',
+            fontSize :'50px',
+            color :'#000',
+        }
+
+
+    /* 3. 리액트돔: 리액트 돔 컨테이너와 리액트 컴포넌트 연결하기. WrapComponent를 root에 넣기 위해서 3번을 하는 거임 */
+    ReactDOM.render(
+        <WrapComponent title='리액트 설치하기' sub='컴포넌트 만들기' />,
+        document.getElementById('root') /* 뒤에 세미콜론하면 안됨  */
+    );
+
+    ReactDOM.render(
+        <SectionComponent />, 
+        document.getElementById('root1') 
+    );
+    
+    ReactDOM.render(
+        <FootComponent />,
+        document.getElementById('foot') 
+    );
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{margin: 0; padding: 0;}
+body{background-color: wheat;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+#wrap{width: 1000px; height: 700px; background-color: cadetblue; margin: 0 auto;}
+#header{width: 1000px; height: 100px; background-color: cornflowerblue;}
+#nav{width: 1000px; height: 100px; background-color: seagreen;}
+#section{width: 1000px; height: 400px; background-color: salmon;}
+#aside{width: 300px; height: 400px; background-color: brown; float: left; padding: 20px; box-sizing: border-box;}
+#article{width: 700px; height: 400px; background-color: rgb(168, 138, 138); float: left ; padding: 20px; box-sizing: border-box;}
+#footer{width: 1000px; height: 100px; background-color: palevioletred;}
+
+h1{float: left; width: 150px; text-align: center; line-height: 100px; }
+h1 a{text-decoration: none;}
+.search{float: left; border: 1px solid #ff0; width: 450px; height: 50px;  text-align: center; margin-top: 25px; line-height: 50px;}
+.gnb{float: right; margin-top: 20px;}
+.gnb ul{}
+.gnb ul li{float: left;}
+.gnb ul li a{color: #fff;  padding: 10px 20px;}
+
+.nav-wrap{}
+.nav-wrap ul{text-align: center; display: inline-block; margin-top: 40px; margin-left: 110px;}
+.nav-wrap ul li{float: left; width: 150px;  margin: 0;}
+.nav-wrap ul li a{color: #fff; }
+
+
+.aside1{width: 100%; height: 150px; background-color: blue; margin-bottom: 23px;}
+.aside2{width: 100%; height: 180px; background-color: blue;}
+#article h2{text-align: center;}
+.article1{width: 200px; height: 300px; background-color: aqua; float: left; margin-right: 10px; margin-left: 21px; margin-top: 13px;}
+.article2{width: 200px; height: 300px; background-color: aqua; float: left; margin-right: 10px; margin-top: 13px;}
+.article3{width: 200px; height: 300px; background-color: aqua; float: left; margin-top: 13px;}
+
+
+#footer .f-logo{float: left; margin-top: 40px; margin-left: 26px;}
+#footer .address{float: left; margin-top: 40px; margin-left: 26px;}
+#footer ul{margin-top: 40px;}
+#footer ul li{line-height: 100px; margin-right: 15px;}
+#footer ul li a{float: right;}
+#footer ul li a:last-child{margin-left: 20px;}

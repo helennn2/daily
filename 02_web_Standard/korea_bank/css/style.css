@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 공통속성 */
+body{font-family: 'Noto Sans KR', sans-serif;}
+.container{width: 1140px; margin: 0 auto; height: inherit;background:rgba(0,0,0,.5); /*  background:rgba(0,0,0,.5); */}
+
+/* 레이아웃 */
+#header{height: 200px; background: url(../img/KV_login.png) no-repeat;}
+#content{height:880px; background: #fff; }
+#footer{height: 270px; background: #000; padding: 14px 0;}
+
+/* 헤더영역 */
+#header .container{padding-top: 20px;}
+.h_inner{width:100%; height:115px; background: #fff; margin-top: 20px;}
+.h_top{height: 56px; box-sizing: border-box; padding: 16px 20px 8px;}
+.h_top>.h_logo{float: left;}
+.h_top>.h_gnb_menu{float: right;}
+.h_top>.h_gnb_menu ul > li{float: left; padding: 0 15px; position: relative;}
+.h_top>.h_gnb_menu ul > li:after{content:'';width: 1px;  height: 13px;background:#b8b8b8;position: absolute;top: 4px;  right: 0;}
+.h_top>.h_gnb_menu ul > li:last-child::after{background: none;}
+.h_top>.h_gnb_menu ul > li > a{ padding-left: 2px; }
+.h_top>.h_gnb_menu ul > li > a >.icon_customer{width: 22px; height: 18px; background: url(../img/icon_customer.png) no-repeat center top; display: block; float: left;}
+
+
+.h_menu_w{height: 59px;}
+.btn_h_allmenu{ background: url(../img/icon_allmenu.png) no-repeat center center; width: 70px; height: 58px; float: left;}
+.nav{float: left; margin-left:180px; margin-top: 17px;}
+.nav .nav_list>li{float: left; width: 136px;}
+.nav .nav_list>li>a{color: #363636; font-size: 16px; font-weight: bold;}
+.btn_h_search{background: url(../img/icon_search.png) no-repeat center center; width: 70px; height: 58px; float: right;}
+
+
+/* content */
+#content>.container{position: relative;}
+.c_tit{padding-top: 80px; color: #000; font-size: 30px; font-weight: normal;}
+.login_wrap{width: 600px; margin:30px auto;}
+.login_wrap .login_top_box{width: 600px; height: 146px; background: #f9f9f9; text-align: center; line-height: 146px;}
+.login_wrap .login_top_box span{color: #333; font-size: 20px;}
+.login_wrap .login_top_box span strong{font-size: 22px;}
+.login_wrap .login_inner{width: 600px; height: 357px; border: 1px solid #efefef; background: #fff; box-sizing: border-box; padding: 30px 65px 60px;}
+.login_wrap .login_inner .login_inner_wrap{width: 100%; height: 155px;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_left{width: 300px; height: 155px; float: left;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_left .login_inner_lg label{font-size: 12px; color: #1ab8b9; padding-left: 10px;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_left .login_inner_lg .inp_text_line{border-bottom: 2px solid #02a5b1; margin-bottom: 10px;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_left .login_inner_lg .inp_text_line input{border:none; padding: 5px 10px;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_right{width: 150px;height: 155px; float: right;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_right button{background: #02a5b1; width: 150px; height: 120px; color: #fff; font-size:  15px;} 
+.login_wrap .login_inner .login_inner_wrap .login_inner_right button:hover{box-shadow: 3px 3px 5px #ccc;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_right p{ text-align: center;} 
+.login_wrap .login_inner .login_inner_wrap .login_inner_right p a{color: #9b9b9b; padding-top: 10px; display: block;}
+.login_wrap .login_inner .login_inner_wrap .login_inner_right p a:hover{text-decoration: underline;}
+.login_wrap .login_inner .login_btn{width: 100%; display: block;  padding: 13px 15px; margin-top: 60px; background: #fff; border: 1px solid #bf9766; height: 50px; color: #bf9766; font-size: 15px; font-weight: bold; letter-spacing: 1px; box-sizing: border-box; text-align: center;}
+.login_wrap .login_inner .login_btn:hover{box-shadow: 0 5px 5px #ccc;}
+
+.quick_menu{width: 100px; height: 711px; background: #b68b5c; position: absolute; top:10px; right: -100px; text-align: center; color: #fff;}
+.quick_menu h2{font-size: 16px; padding: 10px; 0}
+.quick_menu ul{margin-top: 10px;}
+.quick_menu ul li{margin-bottom: 25px;}
+.quick_menu ul li a{color: #fff; display: block; width: 70px; margin: 0 auto;}
+/* 블록 줬으니 마진 0 오토 줘야 가운데로옴 */
+.quick_menu ul li a i{display: block; width: 100%; height: 40px; background-repeat: no-repeat; background-position: center center; margin-bottom: 10px;}
+
+.quick_menu ul li a .biz_icon{background-image: url(../img/icon_biz.png);}
+.quick_menu ul li a .apply_icon{background-image: url(../img/icon_apply.png);}
+.quick_menu ul li a .print_icon{background-image: url(../img/icon_print.png);}
+.quick_menu ul li a .book_icon{background-image: url(../img/icon_book.png);}
+.quick_menu ul li a .text_btn_icon{background-image: url(../img/icon_training_institute.png);}
+.quick_menu ul li a .training_icon{background-image: url(../img/icon_training_institute.png);}
+.quick_menu ul li a .close_icon{background-image: url(../img/icon_close_big.png);}
+
+
+#footer{color: #9b9b9b;}
+#footer a{color: #9b9b9b;}
+.footer_top{width: 100%; height: 172px;}
+.footer_bottom{width: 100%; height: 72px;color: #9b9b9b; border-top: 1px solid #9b9b9b; padding-top: 10px;}
+.footer_bottom strong{font-weight: normal;}
+.footer_bottom .fBo{font-weight: bold;}
+.footer_bottom p{margin-top: 5px;}
+
+.f_links_w>ul{float: left; width: 175px;}
+.f_links_w>ul li{line-height: 180%;} /* =1.8배 */
+.f_links_w>ul li select{background: none; color: #fff; font-weight: bold;}
+.f_links_w>ul li a{font-weight: bold;}
+#footer .f_links_w>ul li a.a_color{color: #02a5b1;}
+.f_address_sns{clear: both; padding-top: 25px;}
+.f_address_sns .f_address{float: left;}
+.f_address_sns .f_address p{line-height: 170%;}
+.f_address_sns .sns{float: right; width: 220px; height: 60px;}
+.f_address_sns .sns ul{height: 35px; margin-top: 15px;}
+.f_address_sns .sns ul li{float: left; margin: 10px;}
+.f_address_sns .sns ul li a{display: block; width: 35px; height: 35px;}
+.f_address_sns .sns ul li.sns_f a{background: url(../img/icon_facebook.png) no-repeat center center;}
+.f_address_sns .sns ul li.sns_y a{background: url(../img/icon_youtube.png) no-repeat center center;}
+.f_address_sns .sns ul li.sns_i a{background: url(../img/icon_instagram.png) no-repeat center center;}
+.f_address_sns .sns ul li.sns_n a{background: url(../img/icon_naver.png) no-repeat center center;}

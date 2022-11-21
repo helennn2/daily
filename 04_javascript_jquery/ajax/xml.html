@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xml 바인딩</title>
+    <style>
+        table{border-collapse: collapse; border: 1px solid rgb(237, 162, 162)}
+        th,td{ border: 1px solid rgb(237, 162, 162); padding: 5px 10px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"data/dataset.xml",
+                dataType:"xml",
+                success:function(data){
+                    let $data=$(data).find("record");
+                    if($data.length > 0){
+                        let tb=$("<table />");
+                        $.each($data,function(i, o){
+                            let $id=$(o).find("id").text();
+                            let $first_name=$(o).find("first_name").text();
+                            let $last_name=$(o).find("last_name").text();
+                            let $email=$(o).find("email").text();
+                            let $gender=$(o).find("gender").text();
+
+                            let row=$('<tr />').append(
+                                $('<td />').append($id),
+                                $('<td />').append($first_name),
+                                $('<td />').append($last_name),
+                                $('<td />').append($email),
+                                $('<td />').append($gender)
+                            );
+                            tb.append(row);
+                        })
+                        $('.wrap').append(tb);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>

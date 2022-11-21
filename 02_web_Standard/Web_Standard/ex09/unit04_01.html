@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>이미지 배치하고 롤오버시 블러 효과 적용하기</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			*{margin: 0; padding: 0;}
+			h1{margin: 20px auto; color: #fff; text-shadow: 0 0 10px #333; font-size: 3em; text-align: center; font-style: italic;}
+			#bookList{background: url(./images/book_bg.png) no-repeat; width: 476px; height: 246px; border: 5px solid #dbdbdb; 
+				margin: 0 auto; border-radius: 30px; box-shadow: 0 0 10px #666; padding: 23px 0 0 22px; }
+			#bookList ul{list-style: none; }
+			#bookList ul li{float: left; margin-right: 64px; position: relative;}
+			#bookList ul li:last-child{margin-right: 0;}
+			#bookList ul li a{display: block;}
+			#bookList ul li a:hover img{box-shadow:0 0 50px #009900; }
+		/* 	.hit{background: url(./images/ico_hot.png) no-repeat; width: 40px; height: 40px; display: block; position: relative; top:-175px; left: 0;} */
+			.hit{background: url(./images/ico_hot.png) no-repeat; width: 40px; height: 40px; display: block; position: absolute; top:-10px; left: -10px;}
+			/* 인라인 요소 넓이 못 가지는데 hit을 span이 감싸고 있으니 안나오는거. 디스플레이 블럭화 시켜야함 */
+/* 			h1{color: #fff; text-shadow: 0 0 10px #333; font-size: 3em; text-align: center; font-style: italic;}
+			#bookList{width: 500px; margin: 0 auto; border: 8px solid #ddd; height: 320px; border-radius: 35px; box-shadow: 0 0 10px #333;}
+			#bookList ul{list-style: none;}
+			#bookList ul li{float: left; margin-right: 40px; margin-top: 10px;}
+			#bookList ul li a{display: block; border-bottom: 8px solid #ddd;}
+			#bookList ul li span{ border-bottom: 8px solid #ddd;}
+			#bookList ul li span img{border: 3px solid #ddd; box-shadow: 0 0 10px #333;}
+			#bookList ul li #hit{}
+			#bookList ul li:hover img{box-shadow: 0 0 50px rgb(30, 174, 40);} */
+
+		</style>
+	</head>
+
+	<body>
+		<h1>New Book</h1>
+		<div id="bookList">
+			<ul>
+				<li>
+					<a href="#">
+					<span>
+						<img src="images/book1.png" width="107" height="156" alt="book1" class="frame"/><span class="hit">
+						</span>
+					</span>
+					</a>
+				</li>
+				<li><a href="#"><span><img src="images/book2.png" width="107" height="156" alt="book2" class="frame"/><span class="hit"></span></span></a></li>
+				<li><a href="#"><span><img src="images/book3.png" width="107" height="156" alt="book3" /><span class="hit"></span></span></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

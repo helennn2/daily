@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        /* span{float: left;} */
+        #box{display: inline-block; background: red; padding: 50px 20px; margin-top: 50px; width: 500px; height: 300px; /* float: left; */}
+        /* 인라인 요소는 패딩/마진 탑이 안먹힘, 넓이/높이도 안들어감 */
+       /*  메뉴 만들 때는 인라인블록이 좋음 */
+    </style>
+</head>
+<body>
+    <span>오늘은 수요일입니다.</span>
+    <div id="box">
+        <span>일주일의 반을 학원으로 오셨습니다.</span>
+    </div>
+    <span>이틀만 나오시면 주말입니다</span>
+</body>
+</html>

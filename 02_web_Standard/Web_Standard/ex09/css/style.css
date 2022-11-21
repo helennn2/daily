@@ -1,0 +1,13 @@
+*{margin: 0; padding: 0;}
+body{background: linear-gradient(to right, rgb(179, 152, 152, 5%), rgb(228, 129, 129,100%)); margin: 50px;}
+h1{text-align: center; font-style: italic; color: #fff; text-shadow: 0 0 10px #666;}
+#photoBox{width: 330px; margin: 50px auto;}
+#photoBox ul{overflow: hidden; list-style: none; padding-left: 100px;}
+#photoBox ul li{float: left; margin-left: 2px;}
+#photoBox ul .activeS a{background-color: #ff6633; color: #fff;}
+#photoBox ul li:hover a{background-color: #ff6633; color: #fff;}
+#photoBox ul li a:{text-decoration: none; background: #fff; display: block; width: 50px; padding: 3px 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; text-align: center; color: #ff9966; font-size: 18px; }
+#photoBox ul li a{text-decoration: none; background: #fff; display: block; width: 50px; padding: 3px 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; text-align: center; color: #ff9966; font-size: 18px; }
+#photoBox ul li a{text-decoration: none; background: #fff; display: block; width: 50px; padding: 3px 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; text-align: center; color: #ff9966; font-size: 18px; }
+/* a는 인라인이라 그냥 넓이 주면 안먹힘. 디스플레이 블럭 해야함 */
+#photoBox #photo{border: 5px solid #ff6633; background: #fff; border-radius: 15px; text-align: center;}

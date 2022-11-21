@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rss 뉴스 가져오기</title>
+    <style>
+        ul{list-style: none;}
+        a{text-decoration: none; color: #222;}
+        .wrap{width: 700px; margin: 0 auto; border: 1px solid #ddd; padding: 20px;}
+        li{border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"news.php",
+                dataType:'xml',
+                success:function(data){
+                    let $items=$(data).find("item");
+                    if($items.length > 0){
+                        $items=$items.slice(0,10);
+                        let $ulTag=$("<ul />");
+                        $.each($items, function(i, o){
+                            let $title=$(o).find("title").text();
+                            let $link=$(o).find("link").text();
+
+                            let $aTag=$("<a />").attr({"href":$link, "target":"_blank"}).text($title);
+                            let $liTag=$("<li />").append($aTag);
+                            $ulTag.append($liTag);
+                        })
+                        $('.wrap').append($ulTag);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+
+    </div>
+</body>
+</html>
+

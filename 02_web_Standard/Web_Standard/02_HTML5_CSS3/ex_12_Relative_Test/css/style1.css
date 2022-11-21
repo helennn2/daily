@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+
+ul{list-style: none;}
+a{text-decoration: none; color: #fff;}
+
+.nav{background-color: mediumpurple; border-radius: 5px; height: 50px; margin: 50px 50px 0 50px;}
+/* 플루레프트-오버플로우 히든 주면 숨겨져서 높이 주는게 좋음 */
+.nav>ul>li{float: left; width: 150px; margin-right: 1px; text-align: center;}
+/* a의 부모인 li에게 텍스트라인 센터 줘야 먹힘 */
+/* 전체적으로 하이퍼링크 손가락 되려면 패딩으로 영역을 넓혀줘야 되는데 그러기 위해선 a에게 블럭 지정해주고  */
+.nav>ul>li>a{display: block; padding: 14px 0 15px; font-weight: bold;}
+.nav>ul>li:hover>a{text-shadow: 2px 2px 2px #000;}
+.nav>ul>li>ul{background: rgb(188, 169, 228); position: absolute; width: 150px; z-index: 10; display: none;}
+/* 앱솔루트(붕떠서 영향을 덜 줌)는 컨텐츠양만큼 줄어서 넓이가 줄어들기 때문에 넓이 지정을 해줘야됨 */
+/* 투댑스들 안보이게 디스플레이 논 해줘야함->호버로 디스플레이 블럭하면 보임 */
+.nav>ul>li:hover>ul{display: block;}
+.nav>ul>li>ul li{height: 40px; border-bottom: 1px solid #fff;}
+.nav>ul>li>ul li:last-child{border-bottom: none;}
+.nav>ul>li>ul li a{display: block; padding: 9px 0;} /* 글씨 가운데로 보내기 위한 방법,손가락 영역 넓히기 */
+.nav>ul>li>ul li:hover a{opacity: .8; background: rgb(135, 103, 180);}
+/* 투댑스 들어가면 꺽새 써줘야함 */
+/* 쓰리뎁스 아니면 그냥 띄우기만 해도 됨 */
+
+
+.body{width: 100%; height: 500px; background: linear-gradient(to top, rgb(205, 182, 210), rgb(204, 128, 213));}

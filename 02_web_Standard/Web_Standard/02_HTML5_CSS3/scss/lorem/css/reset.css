@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+article, aside, figcaption, figure, footer, header, section, nav, hgroup {
+  display: block;
+}
+
+body {
+  padding: 3rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}/*# sourceMappingURL=reset.css.map */

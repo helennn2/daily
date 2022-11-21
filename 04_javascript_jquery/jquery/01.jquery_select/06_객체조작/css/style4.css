@@ -1,0 +1,21 @@
+#wrap{width: 1000px; padding: 30px; margin: 50px auto;}
+.sec{border: 3px solid salmon; padding: 20px; margin-bottom: 10px;}
+#sec1 div{margin-bottom: 5px; padding: 5px;}
+
+.box{border: 3px solid #ddd; padding: 20px;}
+#div1{display: none;}
+#div2{display: block;}
+#div3{width: 100px; height: 100px; background: tomato; display: none;}
+#div4{width: 100px; height: 100px; background: tomato; display: block;}
+.box2 div{background: pink; margin-bottom: 10px; transition: .5s;}
+
+.container{height: 100px; margin-bottom: 10px;}
+#div7{background: pink; height: 100%; display: none;}
+#div8{background: skyblue; height: 100%;}
+#div9{background: yellowgreen; height: 100%;}
+#div10{background: skyblue; height: 100%; display: none;}
+#div11{background: yellowgreen; height: 100%;}
+.box5{height: 700px; position: relative;}
+.div12{padding: 30px; position: absolute; background: peachpuff; top: 0; left: 0;}
+.div13{padding: 30px; position: absolute; background: rgb(119, 140, 184); bottom: 0; right: 0;}
+.div14{padding: 30px; position: absolute; background: rgb(196, 15, 15); bottom: 0; left: 0;}

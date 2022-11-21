@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 슬라이드</title>
+    <style>
+        .num-animation{padding: 20px; position: absolute; border: 3px solid yellowgreen; left: 50%; top: 50px; transform: translateX(-50%);}
+        .ani-wrap{width: 200px; height: auto; margin: 200px auto; text-align: center;}
+        .num-animation1{padding: 20px; border: 3px solid yellowgreen; margin-bottom: 5px;}
+    </style>
+</head>
+<body>
+    <div class="num-animation" data-num="90">0</div>
+    <hr>
+    <div class="ani-wrap">
+        <div class="num-animation1" data-num="90">0</div>
+        <div class="num-animation1" data-num="60">0</div>
+        <div class="num-animation1" data-num="40">0</div>
+    </div>
+    <script>
+        const numAnimation=document.querySelector('.num-animation');
+        const numAnimation1=document.querySelectorAll('.num-animation1');
+        let num=0;
+        let targetNum=numAnimation.getAttribute('data-num');
+
+        let timer=setInterval(function(){
+            ++num;
+            numAnimation.innerText=num;
+            if(num==targetNum){
+                clearInterval(timer);
+            }
+        },10); //0.001초임
+        //console.log(targetNum)
+        //numAnimation.innerText=1;
+
+        function changeNum(idx){
+            let current=0;
+            let targetNum1=numAnimation1[idx].getAttribute('data-num')
+            let timer1=setInterval(function(){
+                ++current;
+                numAnimation1[idx].innerText=current;
+                if(current==targetNum1){
+                    clearInterval(timer1)
+                }
+            },10);
+        }
+        for(let i=0; i<numAnimation1.length; i++){
+            changeNum(i);
+        }
+    </script>
+</body>
+</html>

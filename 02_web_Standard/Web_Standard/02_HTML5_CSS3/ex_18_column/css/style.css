@@ -1,0 +1,19 @@
+*{box-sizing: border-box;}
+body{padding: 2rem; margin: 0; line-height: 1.5; background: #1e1f26; color: #1e1f26; counter-reset: a;}
+/* counter-reset: a; 넣어줘야 번호가 순서대로 나옴(비포 컨텐츠들 써주고) */
+.grid-item{background: #fff; display: flex; margin-bottom: 1rem; align-items: center; justify-content: center; text-align: center; position: relative;}
+.grid-item::before{counter-increment: a; content:counter(a); position: absolute; top: 0; left: 0; background-color: thistle; width: 1.5rem; height: 1.5rem; color: #fff; text-align: center; line-height: 1.5rem; font-size: 80%;}
+/* a의 이름을 받아와서 그대로 씀 */
+
+@media screen and (min-width:768px) {
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
+        grid-template-rows: 4rem;
+        grid-gap: 1rem;
+    }
+    .short{grid-row: span 2;}
+    .tall{grid-row: span 3;}
+    .taller{grid-row: span 4;}
+    .tallest{grid-row: span 5;}
+}

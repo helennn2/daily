@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        var tv=new Object();
+        tv.color="white";
+        tv.price=300000;
+        tv.info=function(){
+            document.write("tv 색상:"+this.color, "<br>")
+            document.write("tv 가격:"+this.price, "<br>")
+        }
+
+        tv.info();
+
+        var t=new Date();
+        /* document.write(t) 현재 날짜. 시간 뜸 */ 
+        var y=t.getFullYear(); //getyear 하려면 +1900 같이 해줘야함
+        var m=t.getMonth()+1; //0달부터 카운트해서 +1해줘야함
+        var d=t.getDate();
+        var y1=t.getDay(); //일0~토6
+        var h=t.getHours();
+        var m1=t.getMinutes();
+        var m2=t.getMilliseconds();
+        
+
+        document.write(y, "<br><hr>");
+        document.write(m, "<br><hr>");
+        document.write(d, "<br><hr>");
+        document.write(y1, "<br><hr>");
+        document.write(h, "<br><hr>");
+        document.write(m1, "<br><hr>");
+        document.write(m2, "<br><hr>");
+
+
+        var worldcup=new Date(2002,4,31);
+        var theMonth=worldcup.getMonth(),
+        theDate=worldcup.getDate(),
+        theDay=worldcup.getDay();
+
+        document.write("<h1>월드컵 날짜 정보</h1>");
+        document.write("2002월드컵 몇 월:"+theMonth,"<br>");
+        document.write("2002월드컵 몇 일"+theDate,"<br>");
+        document.write("2002월드컵 무슨 요일:"+theDay,"<br>");
+
+        var today=new Date();
+        var newYear=today.getFullYear();
+        var theDate=new Date(newYear,8,29);
+        var diffDate=theDate.getTime()-today.getTime();
+        var result=Math.ceil(diffDate/(60*1000*60*24));
+
+        document.write("연말 D-day:"+result+"일 남았습니다");
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import url('reset.css');
+
+#wrap{width: 700px; height: 550px;margin: 50px auto; background: #ff0; border: 10px solid #f00}
+
+#header{width:100%; height: 90px; background: #ddd; text-align: center; line-height: 90px; border-bottom: 10px solid #f00;}
+#section{width: 100%; height: 400px;}
+#footer{width: 100%; height: 40px; text-align: center; background: #ddd; line-height: 40px; border-top: 10px solid #f00;}
+
+.left{width: 100px; height: 100%; background: #ccc;float: left;}
+.center{width: 480px; height: 100%; background: rgb(241, 223, 223);float: left; border-left: 10px solid #f00; border-right: 10px solid #f00;}
+.right{width: 100px; height: 100%; background: #ccc;float: left;}
+
+.box1_1{width: 100px; height:95px;}
+.box5_2{width: 480px; height:195px;}
+.box1_2{width: 100px; height:195px;}
+.color1{background: yellow;}
+.color2{background: blue;}
+.color3{background: rgb(21, 221, 231);}
+.color4{background: rgb(9, 133, 140);}
+.color5{background: rgb(12, 40, 220); height: 90px}
+.color6{background: rgb(87, 154, 235);}
+
+.b-bottom{border-bottom: 5px solid #f00;}
+.b-top{border-top: 5px solid #f00;}
+.h{height: 90px}
+
+/* @charset "utf-8";
+@import url('reset.css');
+
+#wrap{width: 700px; height: 550px;margin: 50px auto; background: #ff0; border: 10px solid #f00}
+
+#header{width:100%; height: 90px; background: #ddd; text-align: center; line-height: 90px; border-bottom: 10px solid #f00;}
+#section{width: 100%; height: 400px;}
+#footer{width: 100%; height: 40px; text-align: center; background: #ddd; line-height: 40px; border-top: 10px solid #f00;}
+
+.left{width: 100px; height: 370px; background: #ccc; float: left;}
+.center{width: 480px; height: 100%; background: rgb(241, 223, 223);float: left; border-left: 10px solid #f00; border-right: 10px solid #f00;}
+.right{width: 100px; height: 100%; background: #ccc;float: left;}
+.right .right1{border-bottom: 5px solid red;}
+.right .rightT{border-bottom: 5px solid red;}
+.right .rightB{border-top: 5px solid red;}
+
+.box1_1{width: 100px; height: 95px;}
+.box5_2{width: 480px; height:195px;}
+.box1_2{width: 100px; height:195px;}
+.color1{background: yellow;}
+.color2{background: blue;}
+.color3{background: rgb(21, 221, 231);}
+.color4{background: rgb(9, 133, 140);}
+.color5{background: rgb(12, 40, 220);}
+.color6{background: rgb(87, 154, 235); height: 90px;}
+
+
+.b-bottom{border-bottom: 5px solid red;}
+.b-top{border-top: 5px solid red;}
+.h{height: 90px;} */

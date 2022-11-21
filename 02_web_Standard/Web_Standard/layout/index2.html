@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1><a href="#">Logo</a></h1>
+            <div class="search">search</div>
+            <div class="gnb">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="nav" class="nav-wrap">
+            <ul>
+                <li><a href="#">MENU1</a></li>
+                <li><a href="#">MENU2</a></li>
+                <li><a href="#">MENU3</a></li>
+                <li><a href="#">MENU4</a></li>
+                <li><a href="#">MENU5</a></li>
+            </ul>
+        </div>
+        <div id="section">
+            <div id="aside">
+                <div class="aside1"></div>
+                <div class="aside2"></div>
+            </div>
+            <div id="article">
+                <h2>제목</h2>
+                <div class="article1"></div>
+                <div class="article2"></div>
+                <div class="article3"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="f-logo">f-logo</div>
+            <div class="address">경기도 수원시 매산로 111</div>
+            <ul>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">youtube</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $('.nav-wrap>ul>li').hover(function(){
+            $(this).find('ul').slideDown();
+        },function(){
+            $(this).find('ul').slideUp();
+        });
+    </script>
+</body>
+</html>

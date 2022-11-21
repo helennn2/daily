@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border_tip{width: 400px; height: auto; background: greenyellow; margin: 100px auto; padding: 20px; position: relative;}
+        .border_tip:before{content: ''; position: absolute; left: 50%; transform:translateX(-50%); top: -10px; border-bottom: 10px solid greenyellow; border-left: 10px solid transparent; border-right: 10px solid transparent;}
+        .border_tip:after{content: ''; position: absolute; left: 50%; transform:translateX(-50%); bottom: -10px; border-top: 10px solid greenyellow; border-left: 10px solid transparent; border-right: 10px solid transparent;}
+        .border_tip .right{position: absolute; top:50%; left:-10px; transform: translateY(-50%); border-right:10px solid rgb(59, 75, 35); border-top: 10px solid transparent; border-bottom: 10px solid transparent;}
+        .border_tip .left{position: absolute; top:50%; right:-10px; transform: translateY(-50%); border-left:10px solid rgb(59, 75, 35); border-top: 10px solid transparent; border-bottom: 10px solid transparent;}
+    </style>
+</head>
+<body>
+    <div class="border_tip">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque totam dolorum nisi voluptatum eligendi quibusdam nam, soluta, repellendus rem earum deserunt, incidunt laudantium commodi qui libero praesentium non ducimus? Sed!
+        <div class="right"></div>
+        <div class="left"></div>
+    </div>
+</body>
+</html>

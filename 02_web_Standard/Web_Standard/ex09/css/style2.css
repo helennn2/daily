@@ -1,0 +1,30 @@
+body{font-size: .85em;}
+h1{text-align: center;}
+#tableDesign{margin: 0 auto; border-collapse: collapse;} /* 콜랩스 쓰면 간격이 한 줄로 돼서 붙음 */
+#tableDesign caption{display: none;}
+#tableDesign tr{}
+#tableDesign tr th{background: #efefef; border-top: 1px solid #333; border-bottom: 2px solid #333; padding: 10px 0;}
+#tableDesign tr th:first-child{width: 80px;}
+#tableDesign tr th:nth-child(2){width: 350px;}
+#tableDesign tr th:nth-child(3){width: 170px;}
+#tableDesign tr th:nth-child(4){width: 150px;}
+#tableDesign tr th:nth-child(5){width: 120px;}
+#tableDesign tr th span{display: block; border-right: 1px solid #939393;}
+#tableDesign tr td{padding: 8px 0; text-align: center; border-bottom: 1px solid #333;}
+#tableDesign tr:nth-child(odd) td{border-bottom-width: 2px;}
+#tableDesign tr .leftStyle{text-align: left;}
+#tableDesign tr .btnView{background: #666; border: none; color: #fff; border-radius: 5px; cursor: pointer; padding: 5px 20px;}
+
+
+
+/* *{margin: 0; padding: 0;}
+body{width: 1000px; height: 300px; margin: 0 auto;}
+h1{text-align: center; margin: 30px; display: table-caption; padding: 5px 5px; margin-left: 343px;}
+#tableDesign{display: table; border-collapse: collapse;}
+#tableDesign caption{display: none; font-size: .9em;}
+#tableDesign tr{padding: 5px; padding: 0 30px; width: 500px; border-bottom: 1px solid #ddd; }
+#tableDesign tr:nth-child(2n){border-bottom: 2px solid #000; }
+#tableDesign th{border-top: 1px solid #000; border-bottom: 2px solid #000; font-size: 16px; font-weight: 500; display: table-cell; background: #ddd; padding: 10px;}
+#tableDesign tr td{display: table-cell; padding: 15px;}
+#tableDesign tr th{}
+.btnView{background: #333; color: #fff; border: none; border-radius: 5px; padding: 5px 15px;} */

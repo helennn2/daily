@@ -1,0 +1,11 @@
+*{margin: 0; padding: 0; border: 0;}
+h1{text-align: center;}
+.animation_canvas{width: 600px; height: 400px; margin: 20px auto; position: relative; overflow: hidden;}
+.animation_canvas .slider-panel{width: 3000px; position: relative; }
+.animation_canvas .slider-panel img{width: 600px; height: 400px; float: left;}
+.animation_canvas .text-panel{position: absolute; top: 150px; left: 50px;}
+.animation_canvas .text-panel .slider-text{position: absolute; width: 250px; height: 150px; color: #fff; font-weight: bold; text-align: justify;}
+.animation_canvas .control-panel{position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); height: 15px; overflow: hidden;}
+.animation_canvas .control-panel .control-button{width: 15px; height: 45px; position: relative; float: left; cursor: pointer; background: url(../images/point_button.png) 0 0;}
+.animation_canvas .control-panel .control-button:hover{top: -15px; }
+.animation_canvas .control-panel .control-button:active{top: -30px; }

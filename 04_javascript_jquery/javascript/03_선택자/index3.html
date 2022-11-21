@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript slide</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        a{text-decoration: none; color: #000;}
+        #gallery{width: 350px; padding-bottom: 10px; margin: 100px auto; border: 5px solid rgb(206, 128, 128); box-shadow: 5px 5px 10px #ccc; text-align: center;}
+        #gallery h1{margin: 10px 0;}
+        #gallery #photo img{border: 8px solid #ddd;}
+        #gallery #photo_list{width: 300px; margin: 10px auto; overflow: hidden;}
+        #gallery #photo_list ul{overflow: hidden; width: 800px; transition: .5s; position: relative; left: 0;} /* 렐라티브 있어야 트렌지션 자연스럽게 움직임 */
+        #gallery #photo_list ul li{float: left; width: 100px; text-align: center;}
+        #gallery #photo_list ul li img{border: 3px solid #ddd;}
+        #gallery .btn_wrap a{font-weight: bold;}
+    </style>
+    <script>
+        window.onload=function(){
+            const listZone=document.getElementById('inner_list'); //var(변할 때)로 써도 됨.변하지 않을 땐 const
+            const listA=listZone.getElementsByTagName('a');
+
+            for(let i=0; i<listA.length; i++){
+                listA[i].onclick=function(){
+                    let ph=document.getElementById('photo').children[0];
+                    ph.src=this.href;
+                    return false;
+                }
+            }
+
+            const nBtn=document.getElementById("nextBtn");
+            const pBtn=document.getElementById("beforeBtn");
+            let m_num=0;
+
+            nBtn.onclick=function(){
+                if(m_num>=listA.length-3) return false //5개까지만 1씩 증가함. return false는 그다음부터 작업이 되지 않게끔
+                m_num++;
+                listZone.style.left=-100*m_num +"px";
+            }
+            pBtn.onclick=function(){
+                if(m_num<=0) return false 
+                m_num--;
+                listZone.style.left=-100*m_num +"px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <h1>동해안 갤러리</h1>
+        <p id="photo">
+            <img src="./images/pic_1.jpg" alt="동해안 이미지 1" width="320"> <!-- html에서는 단위가 px이라 안써도 됨 -->
+        </p>
+        <div id="photo_list">
+            <ul id="inner_list">
+                <li><a href="./images/pic_1.jpg"><img src="./images/pic_t1.jpg" alt="썸네일1"></a></li>
+                <li><a href="./images/pic_2.jpg"><img src="./images/pic_t2.jpg" alt="썸네일2"></a></li>
+                <li><a href="./images/pic_3.jpg"><img src="./images/pic_t3.jpg" alt="썸네일3"></a></li>
+                <li><a href="./images/pic_4.jpg"><img src="./images/pic_t4.jpg" alt="썸네일4"></a></li>
+                <li><a href="./images/pic_5.jpg"><img src="./images/pic_t5.jpg" alt="썸네일5"></a></li>
+                <li><a href="./images/pic_6.jpg"><img src="./images/pic_t6.jpg" alt="썸네일6"></a></li>
+                <li><a href="./images/pic_7.jpg"><img src="./images/pic_t7.jpg" alt="썸네일7"></a></li>
+                <li><a href="./images/pic_8.jpg"><img src="./images/pic_t8.jpg" alt="썸네일8"></a></li>
+            </ul>
+        </div>
+        <p class="btn_wrap">
+            <a href="#" id="beforeBtn">&lt;</a>
+            <a href="#" id="nextBtn">&gt;</a>
+        </p>
+    </div>
+</body>
+</html>

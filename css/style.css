@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@font-face {
+    font-family: 'NotoSerifKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{font-family: 'Playfair Display', 'NotoSerifKR', sans-serif; margin: 70px 0 0 30px; /* background: rgb(235, 235, 235); */}
+
+a{text-decoration: none; color: #000; }
+
+#wrap{width: 1350px;}
+#wrap .menu_wrap{display: flex;}
+#wrap .menu_wrap>ul{list-style: none; margin-top: 30px; width: 12%;}
+#wrap .menu_wrap ul li{margin-bottom: 10px;}
+#wrap .menu_wrap ul li a{font-size: 22px; font-weight: 500; width: 100%; }
+#wrap .menu_wrap ul li a.on{background: linear-gradient(to top, #fad4ae 50%, transparent 50%);}
+#wrap .menu_wrap .desc{position: relative; margin: 28px 0 15px 30px; width: 100%; box-sizing: border-box;}
+#wrap .menu_wrap .desc #htmlcss{width: 100%; height: 2058px; background: #faf1d6; border-radius: 30px;}
+#wrap .menu_wrap .desc #htmlcss p{position: absolute; top: -50px; right: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bold;}
+#wrap .menu_wrap .desc #js{width: 100%; height: 750px; background: #faf1d6; border-radius: 30px;}
+#wrap .menu_wrap .desc #js p{position: absolute; top: -50px; right: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bold;}
+#wrap .menu_wrap .desc #jq{width: 100%; height: 540px; background: #faf1d6; border-radius: 30px;}
+#wrap .menu_wrap .desc #jq p{position: absolute; top: -50px; right: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bold;}
+#wrap .menu_wrap .desc #jq .d_wrap{padding: 20px;}
+#wrap .menu_wrap .desc #jq a{padding-left: 8px; display: inline;}
+#wrap .menu_wrap .desc #react{width: 100%; height: 300px; background: #faf1d6; border-radius: 30px;}
+#wrap .menu_wrap .desc #react p{position: absolute; top: -50px; right: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bold;}
+#wrap .menu_wrap .desc #res{width: 100%; height: 448px; background: #faf1d6; border-radius: 30px;}
+#wrap .menu_wrap .desc #link{width: 100%; height: 361px; background: #faf1d6; border-radius: 30px; flex: none;}
+#wrap .menu_wrap .desc .menu_main{position: absolute; width: 1300px; box-sizing: border-box; display: flex;}
+#wrap .menu_wrap .desc .menu_main ul{width: 50%;}
+#wrap .menu_wrap .desc .menu_main ul li{line-height: 1.8;}
+#wrap .menu_wrap .desc .menu_main ul li a{font-size: 18px;}
+
+summary{display: block; cursor: pointer; outline: 0; font-family: 'Playfair Display', 'NotoSerifKR', sans-serif; font-size: 18px; font-weight: 500;}
+summary::-webkit-details-marker{display: none;}
+.tree-nav__item{display: block; white-space: nowrap; color: #ccc; position: relative;}
+.tree-nav__item.is-expandable::before{border-left: 2px solid rgb(123, 122, 122); content: ""; height: 100%; left: 0.8rem; position: absolute; top: 2.4rem; height: calc(100% - 2.4rem);}
+.tree-nav__item .tree-nav__item{margin-left: 2.4rem;}
+.tree-nav__item.is-expandable[open] > .tree-nav__item-title::before{font-family: "ionicons"; transform: rotate(90deg);}
+.tree-nav__item.is-expandable > .tree-nav__item-title{padding-left: 2.4rem;}
+.tree-nav__item.is-expandable > .tree-nav__item-title::before{position: absolute; will-change: transform; transition: transform 300ms ease; font-family: "ionicons"; color: #000; font-size: 1.1rem; content: "\f125"; left: 0; display: inline-block; width: 1.6rem; text-align: center;}
+.tree-nav__item-title{cursor: pointer; display: block; outline: 0; color: #000; font-size: 18px; line-height: 2.4rem; font-weight: 500;}
+.tree-nav__item-title::-webkit-details-marker{display: none;}
+
+#backToTop{position: fixed; bottom: 3em; right: 3em; background: rgba(255,255,255,.9); color: #313944; border: none; border-radius: 5px; padding: 1em; text-transform: uppercase; text-decoration: none; font-weight: bold; box-shadow: 0 0 2em #ddd; transition: all .3s ease-in-out; display: inline-block; opacity: 0;}
+#backToTop:hover{padding: 1em 3em; background-color: #fff;}
+#backToTop.visible{opacity: 1;}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.container{width: 1440px ; height: inherit; margin: 0 auto;}
+#wrap{width: 100%; }
+#header{width: 100%; height: 105px; background: rgba(255,255,255,.7); position: fixed; top: 0; left: 0;}
+#contents{width: 100%; height: 700px; background: url(../image/bg.jpg) no-repeat center center/cover;}
+/* /하면 사이즈 지정 */
+
+/* header 영역 */
+.header-inner h1{float: left; margin-top: 20px;}
+.nav{width: 850px; height: 105px; float: left; margin-left: 100px; background-color: aquamarine;}
+.nav>ul>li{float: left; width: 150px; margin: 0 10px; text-align: center;}
+.nav>ul>li>a{font-size: 2em; font-weight: bold; display: block; padding: 33px 0;}
+.nav>ul>li>.red{color: RED;}
+.nav>ul>li>.green{color: green;}
+.nav>ul>li>.yellowgreen{color: rgb(90, 129, 12);}
+.nav>ul>li>.purple{color: purple;}
+.nav>ul>li>.skyblue{color: rgb(29, 102, 131);}
+.nav .bg{width: 100%; height: 0px; position: absolute; background:rgba(6, 61, 180, 0.9); top: 105px; left: 0; transition: .5s; }
+.nav:hover .bg{height: 200px;}
+.nav>ul>li>ul{position: absolute; z-index: 10; width: 150px; height: 0; overflow: hidden; transition: .5s;} 
+/* z-index해야 파랑 위에 글씨 보임 */
+/* height: 0; overflow: hidden; 이렇게 하면 글자 안보이다가 마우스 댈때 보임 */
+.nav>ul:hover>li>ul{height: 200px;}/*  같이 떨어지기 위해 호버 위치 체크 */
+.nav>ul>li:hover>ul{ background: rgba(225,225,225,.5);} 
+.nav>ul>li>ul li{text-align: left; padding: 0 10px;}
+.nav>ul>li>ul li a{display: block; padding: 10px 0; color: #fff; font-weight: bold; }
+.nav>ul>li>ul li a:hover{color: rgb(21, 53, 214); }
+
+.search{width: 150px; height: 105px; float: right;}
+.search .search-round{width: 150px; height: 50px; background: rgb(44, 57, 177) url(../image/totalsearch_ico.png) no-repeat right 10px center; border-radius: 20px; margin-top: 25px; padding: 15px 5px; box-sizing: border-box;}
+.search .search-round input{border: none; background: none; width:100px; padding-left: 10px;}
+.search .search-round input:focus{outline: none;}

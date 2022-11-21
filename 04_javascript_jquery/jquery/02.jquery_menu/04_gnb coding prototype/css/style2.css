@@ -1,0 +1,68 @@
+/* HTML5 display-role reset for older browsers */
+/* article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+nav{font-size: 18px; background: #999; position: absolute; width: 100%;}
+nav>ul{display: flex; justify-content: center; overflow: hidden; height: 40px; transition: .3s;}
+nav>ul>li{position: relative; z-index: 11;}
+nav>ul>li>a{display: block; padding: 10px 40px; font-weight: bold; color: #fff; text-decoration: none;}
+.sub-shadow{position: absolute; left: 0; top: 40px; z-index: 10; height: 0; width: 100%; background: #999; transition: height .3s;}
+nav+.sub-shadow.active{height: 160px;}
+nav>ul>li:hover ul li{background: #888;}
+nav>ul>li ul li.active{background: #888;}
+nav>ul.active{height: 200px;}
+nav>ul>li>ul li{}
+nav>ul>li>ul li a{display: block; padding: 10px 40px; text-decoration: none; font-weight: bold; color: #666; transition: .3s;}
+nav>ul>li>ul li a:hover{text-decoration: underline; color: #fff;}
+.contents{width: 100%; height: 400px; background: rgb(237, 169, 169);} */
+
+@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+nav{font-size: 18px; background-color: #999; position: absolute; width: 100%}
+nav > ul{display: flex; justify-content: center; overflow: hidden; height:40px; transition:  .3s;}
+nav > ul > li{position: relative; z-index: 11;}
+nav > ul > li > a{display: block; padding: 10px 40px; font-weight: bold;  color: #fff; text-decoration: none;}
+
+nav>ul>li:hover ul{background: #888;}
+
+nav > ul.active{ height: 190px}
+nav > ul > li > ul li a{display: block; padding: 10px 40px; text-decoration: none; font-weight: bold; color: #666; transition: .3s;}
+nav > ul > li > ul li a:hover{text-decoration: underline; color:#fff}
+.contents{width: 100%; height: 400px; background: rgb(126, 234, 219);}

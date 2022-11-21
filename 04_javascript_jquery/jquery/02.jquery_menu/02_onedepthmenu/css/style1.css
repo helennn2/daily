@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+#wrap{width: 800px; margin: 100px auto;}
+#wrap .nav li{text-align: center; cursor: pointer; height: 97px; float: left; margin-right: 10px;}
+#wrap .nav li .menu-img{width: 0; overflow: hidden; float: left; margin-right: 10px;}
+#wrap .nav li .menu-img a img{width: 97px;} 
+#wrap .nav li .menu-txt{float: left; line-height: 97px;}
+#wrap .nav li .menu-txt .on{display: none;}

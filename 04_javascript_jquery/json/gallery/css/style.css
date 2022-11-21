@@ -1,0 +1,17 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: #fff;}
+
+.page-main{width: 1140px; margin: 10px auto 100px;}
+
+.gallery:after{content: ""; display: block; clear: both;}
+.gallery .gallery-item{float: left; margin-top: 10px; background: rgb(104, 0, 0); padding: 20px; animation: fadeIn 1s; text-align: center;}
+
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.gallery .gallery-item.is-loading{opacity: 0;}
+.load-more{width: 100%; border: none; background: rgb(187, 145, 145); color: #fff; padding: 10px 20px; box-sizing: border-box; margin-top: 20px;}
